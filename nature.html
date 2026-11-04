@@ -77,10 +77,257 @@
 
     <!-- Основной контент страницы -->
     <main class="container my-5 flex-grow-1">
-        <h2 class="h3 mb-3">Природа и архитектура</h2>
-        <p class="text-muted">
-            Раздел находится в разработке. Здесь будет размещен каталог природных памятников и архитектурных достопримечательностей города.
-        </p>
+        <nav aria-label="breadcrumb" class="mb-4">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Природа и архитектура</li>
+            </ol>
+        </nav>
+
+        <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+            <div>
+                <h1 class="display-5 fw-bold mb-1">Природа и архитектура</h1>
+                <p class="lead text-muted mb-0">Уникальные шиханы, реки и старинный купеческий колорит Стерлитамака.</p>
+            </div>
+            <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#infoModal">
+                Памятка туристу
+            </button>
+        </div>
+
+        <div class="alert alert-success shadow-sm mb-5" role="alert">
+            <h4 class="alert-heading h5">Уникальный геологический памятник</h4>
+            <p class="mb-0">
+                Окрестные горы-Шиханы — это остатки барьерных рифов древнего тропического Пермского моря, возраст которых превышает <strong>280 миллионов лет</strong>. Они вошли в геопарк ЮНЕСКО «Торатау».
+            </p>
+        </div>
+
+        <h2 class="h3 mb-4">Природные красоты</h2>
+        <div class="d-flex flex-column gap-4 mb-5">
+            <!-- 1. Шихан Торатау -->
+            <div class="card shadow-sm border-0 overflow-hidden">
+                <div class="row g-0 align-items-center">
+                    <div class="col-12 col-md-5 col-lg-4 text-center p-3 p-lg-4">
+                        <img src="images/toratau.jpg" class="img-fluid rounded shadow-sm w-100" alt="Шихан Торатау" style="height: 240px; object-fit: cover;">
+                    </div>
+                    <div class="col-12 col-md-7 col-lg-8">
+                        <div class="card-body p-3 p-lg-4">
+                            <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-2">
+                                <span class="badge bg-light text-dark border fs-6">Геопарк ЮНЕСКО</span>
+                                <span class="text-muted small fw-semibold">20 км к югу от города</span>
+                            </div>
+                            <h3 class="card-title h4 mb-3">Шихан Торатау — древний риф и символ башкирской земли</h3>
+                            <p class="card-text text-muted mb-2">
+                                Величественная куполообразная гора-останец высотой 406 метров над уровнем моря (280 метров над уровнем реки Белой). Торатау сложен из известняков древнего тропического рифа Пермского моря, возраст которого превышает 285 миллионов лет. Для башкирского рода Юрматы гора веками почиталась как священное место силы.
+                            </p>
+                            <p class="card-text text-muted mb-0">
+                                Сегодня Торатау — ключевой объект геопарка ЮНЕСКО. Для защиты хрупкой экосистемы и редких краснокнижных растений здесь построена удобная пологая экотропа с лестницей и смотровыми площадками, а у подножия открыт современный визит-центр с интерактивным музеем и кафе.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Шихан Куштау -->
+            <div class="card shadow-sm border-0 overflow-hidden">
+                <div class="row g-0 align-items-center">
+                    <div class="col-12 col-md-5 col-lg-4 text-center p-3 p-lg-4">
+                        <img src="images/kushtau.jpg" class="img-fluid rounded shadow-sm w-100" alt="Шихан Куштау" style="height: 240px; object-fit: cover;">
+                    </div>
+                    <div class="col-12 col-md-7 col-lg-8">
+                        <div class="card-body p-3 p-lg-4">
+                            <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-2">
+                                <span class="badge bg-light text-dark border fs-6">Памятник природы</span>
+                                <span class="text-muted small fw-semibold">15 км к востоку от города</span>
+                            </div>
+                            <h3 class="card-title h4 mb-3">Шихан Куштау — лесистый хребет и всенародная святыня</h3>
+                            <p class="card-text text-muted mb-2">
+                                Самый крупный по площади шихан (протяжённость около 4 км, высота 357 метров), название которого переводится как «двойная гора» или «птица-гора». Пологие склоны Куштау покрыты густыми реликтовыми дубравами и липовыми лесами, ставшими домом для десятков редких видов флоры и фауны.
+                            </p>
+                            <p class="card-text text-muted mb-0">
+                                Зимой здесь действует популярный горнолыжный комплекс с трассами разной сложности и подъёмниками. В августе 2020 года благодаря гражданскому мужеству жителей Стерлитамака шихан отстояли от промышленной разработки, после чего ему был присвоен охранный статус заказника.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Шихан Юрактау -->
+            <div class="card shadow-sm border-0 overflow-hidden">
+                <div class="row g-0 align-items-center">
+                    <div class="col-12 col-md-5 col-lg-4 text-center p-3 p-lg-4">
+                        <img src="images/uraktau.jpg" class="img-fluid rounded shadow-sm w-100" alt="Шихан Юрактау" style="height: 240px; object-fit: cover;">
+                    </div>
+                    <div class="col-12 col-md-7 col-lg-8">
+                        <div class="card-body p-3 p-lg-4">
+                            <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-2">
+                                <span class="badge bg-light text-dark border fs-6">Гора-сердце</span>
+                                <span class="text-muted small fw-semibold">18 км к северо-востоку</span>
+                            </div>
+                            <h3 class="card-title h4 mb-3">Шихан Юрактау — гора-сердце над рекой Белой</h3>
+                            <p class="card-text text-muted mb-2">
+                                Самый северный шихан высотой 338 метров, обладающий выразительной конусообразной формой («Юрактау» переводится с башкирского как «сердце-гора»). С его скалистой вершины открывается потрясающий круговой обзор на пойменные луга, изгибы реки Белой и далёкие силуэты соседних гор.
+                            </p>
+                            <p class="card-text text-muted mb-0">
+                                У подножия Юрактау раскинулось чистое родниковое озеро Мокша — любимое место туристов с палатками и фотографов. На карбонатных склонах горы сохранились уникальные реликтовые растения, многие из которых занесены в Красную книгу России.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Реки города -->
+            <div class="card shadow-sm border-0 overflow-hidden">
+                <div class="row g-0 align-items-center">
+                    <div class="col-12 col-md-5 col-lg-4 text-center p-3 p-lg-4">
+                        <img src="images/reka-belaya.jpg" class="img-fluid rounded shadow-sm w-100" alt="Реки Стерлитамака" style="height: 240px; object-fit: cover;">
+                    </div>
+                    <div class="col-12 col-md-7 col-lg-8">
+                        <div class="card-body p-3 p-lg-4">
+                            <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-2">
+                                <span class="badge bg-light text-dark border fs-6">Водные артерии</span>
+                                <span class="text-muted small fw-semibold">Город 4 рек</span>
+                            </div>
+                            <h3 class="card-title h4 mb-3">Реки Стерлитамака — Белая, Ашкадар, Стерля и Ольховка</h3>
+                            <p class="card-text text-muted mb-2">
+                                Стерлитамак имеет уникальное географическое положение на слиянии четырёх рек. Могучая Белая (Агидель) — главная водная артерия Башкортостана — принимает здесь воды Ашкадара, Стерли и Ольховки. Именно эти водные пути в XVIII веке дали начало судоходству и соляному промыслу.
+                            </p>
+                            <p class="card-text text-muted mb-0">
+                                В наши дни городские набережные переживают масштабное возрождение. Прогулочная зона вдоль реки Стерли с пешеходными мостиками, экопарками и зонами отдыха стала визитной карточкой нового Стерлитамака, а городской пляж на Ашкадаре привлекает тысячи горожан каждое лето.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="h3 mb-4">Архитектурное наследие города</h2>
+        <div class="d-flex flex-column gap-4 mb-5">
+            <!-- 1. Бывшая земская управа -->
+            <div class="card shadow-sm border-0 overflow-hidden">
+                <div class="row g-0 align-items-center">
+                    <div class="col-12 col-md-5 col-lg-4 text-center p-3 p-lg-4">
+                        <img src="images/zemskaya-uprava.jpg" class="img-fluid rounded shadow-sm w-100" alt="Бывшая земская управа" style="height: 240px; object-fit: cover;">
+                    </div>
+                    <div class="col-12 col-md-7 col-lg-8">
+                        <div class="card-body p-3 p-lg-4">
+                            <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-2">
+                                <span class="badge bg-light text-dark border fs-6">1914 год</span>
+                                <span class="text-muted small fw-semibold">ул. Карла Маркса</span>
+                            </div>
+                            <h3 class="card-title h4 mb-3">Бывшая земская управа — памятник дореволюционного зодчества</h3>
+                            <p class="card-text text-muted mb-2">
+                                Одно из самых выразительных и монументальных дореволюционных зданий Стерлитамака, построенное в 1914 году по проекту самарского архитектора. Здание в стиле рационального модерна с элементами эклектики служило административным центром Стерлитамакского уезда, где решались ключевые вопросы развития просвещения, дорог и медицины края.
+                            </p>
+                            <p class="card-text text-muted mb-0">
+                                Фасад здания выделяется сложной рельефной кладкой из красного закалённого кирпича, высокими арочными окнами и массивным парадным порталом. Сегодня этот объект культурного наследия остаётся одной из главных точек архитектурных экскурсий по историческому кварталу Старого города.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Никольский кафедральный собор -->
+            <div class="card shadow-sm border-0 overflow-hidden">
+                <div class="row g-0 align-items-center">
+                    <div class="col-12 col-md-5 col-lg-4 text-center p-3 p-lg-4">
+                        <img src="images/nikolsky-sobor.jpg" class="img-fluid rounded shadow-sm w-100" alt="Никольский кафедральный собор" style="height: 240px; object-fit: cover;">
+                    </div>
+                    <div class="col-12 col-md-7 col-lg-8">
+                        <div class="card-body p-3 p-lg-4">
+                            <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-2">
+                                <span class="badge bg-light text-dark border fs-6">1838 год</span>
+                                <span class="text-muted small fw-semibold">ул. Калинина</span>
+                            </div>
+                            <h3 class="card-title h4 mb-3">Никольский собор — старейший каменный храм города</h3>
+                            <p class="card-text text-muted mb-2">
+                                Старейшее сохранившееся каменное здание Стерлитамака, возведённое в 1838 году в стиле строгого русского классицизма в память о победе над Наполеоном в Отечественной войне 1812 года. Белокаменный храм с величественной четырёхъярусной колокольней веками служил духовным оплотом православных жителей города и окрестных уездов.
+                            </p>
+                            <p class="card-text text-muted mb-0">
+                                В советский период собор пережил закрытие и переоборудование, но в 1940-е годы был возвращён верующим. Сегодня Никольский собор полностью отреставрирован: здесь восстановлены старинные иконостасы, благоустроена прихрамовая территория, а колокольный звон разносится над старыми кварталами города.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Историко-краеведческий музей -->
+            <div class="card shadow-sm border-0 overflow-hidden">
+                <div class="row g-0 align-items-center">
+                    <div class="col-12 col-md-5 col-lg-4 text-center p-3 p-lg-4">
+                        <img src="images/museum-bank.jpg" class="img-fluid rounded shadow-sm w-100" alt="Историко-краеведческий музей" style="height: 240px; object-fit: cover;">
+                    </div>
+                    <div class="col-12 col-md-7 col-lg-8">
+                        <div class="card-body p-3 p-lg-4">
+                            <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-2">
+                                <span class="badge bg-light text-dark border fs-6">1914 год</span>
+                                <span class="text-muted small fw-semibold">ул. Карла Маркса</span>
+                            </div>
+                            <h3 class="card-title h4 mb-3">Историко-краеведческий музей (бывший Сибирский банк)</h3>
+                            <p class="card-text text-muted mb-2">
+                                Изящный двухэтажный особняк в стиле купеческого модерна, построенный в 1914 году на главной купеческой улице города (Большой Заводской, ныне Карла Маркса) для размещения Сибирского купеческого банка. Здание восхищает фигурной кирпичной кладкой, коваными решётками и сохранившимися элементами дореволюционных интерьеров.
+                            </p>
+                            <p class="card-text text-muted mb-0">
+                                Сегодня в стенах бывшего банка работает главный музей города, основанный ещё в 1919 году. В его залах представлены богатейшие археологические находки, этнографические коллекции башкирского, русского и татарского быта, оружие эпохи Пугачёвского восстания и знаменитый 315-килограммовый Стерлитамакский метеорит.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Кинотеатр «Салават» -->
+            <div class="card shadow-sm border-0 overflow-hidden">
+                <div class="row g-0 align-items-center">
+                    <div class="col-12 col-md-5 col-lg-4 text-center p-3 p-lg-4">
+                        <img src="images/salavat-cinema.jpg" class="img-fluid rounded shadow-sm w-100" alt="Кинотеатр Салават" style="height: 240px; object-fit: cover;">
+                    </div>
+                    <div class="col-12 col-md-7 col-lg-8">
+                        <div class="card-body p-3 p-lg-4">
+                            <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-2">
+                                <span class="badge bg-light text-dark border fs-6">1959 год</span>
+                                <span class="text-muted small fw-semibold">проспект Ленина</span>
+                            </div>
+                            <h3 class="card-title h4 mb-3">Кинотеатр «Салават» — колоннада советского неоклассицизма</h3>
+                            <p class="card-text text-muted mb-2">
+                                Архитектурный гимн советскому неоклассицизму и символ послевоенного индустриального расцвета города. Здание, возведённое в 1959 году по проекту архитектора Зои Брод, встречает горожан торжественным восьмиколонным коринфским портиком, лепным фронтоном и просторной театральной площадью.
+                            </p>
+                            <p class="card-text text-muted mb-0">
+                                «Салават» долгие десятилетия оставался главным кинокомплексом города и культовым местом свиданий для нескольких поколений стерлитамаковцев. Несмотря на завершение эпохи традиционного кинопроката, здание признано архитектурным памятником регионального значения и готовится к перерождению в новое общественное и креативное пространство.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. Русский драматический театр -->
+            <div class="card shadow-sm border-0 overflow-hidden">
+                <div class="row g-0 align-items-center">
+                    <div class="col-12 col-md-5 col-lg-4 text-center p-3 p-lg-4">
+                        <img src="images/dramatheater.jpg" class="img-fluid rounded shadow-sm w-100" alt="Русский драматический театр" style="height: 240px; object-fit: cover;">
+                    </div>
+                    <div class="col-12 col-md-7 col-lg-8">
+                        <div class="card-body p-3 p-lg-4">
+                            <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-2">
+                                <span class="badge bg-light text-dark border fs-6">1946 год</span>
+                                <span class="text-muted small fw-semibold">ул. Худайбердина</span>
+                            </div>
+                            <h3 class="card-title h4 mb-3">Русский драматический театр — сердце сценического искусства</h3>
+                            <p class="card-text text-muted mb-2">
+                                Ведущий центр театрального искусства юга республики, основанный сразу после окончания Великой Отечественной войны. Здание театра с классическим строгим портиком, колоннами и пилястрами формирует торжественный ансамбль Театральной площади — одного из любимых мест вечерних прогулок горожан.
+                            </p>
+                            <p class="card-text text-muted mb-0">
+                                На сцене театра ставятся как шедевры мировой классики, так и произведения современной драматургии, собирая полные залы зрителей не только из Стерлитамака, но и из Салавата и Ишимбая. Театр неоднократно становился лауреатом всероссийских и международных театральных фестивалей.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center p-4 bg-white border rounded shadow-sm">
+            <h3 class="h5 mb-2">Узнайте о выдающихся личностях Стерлитамака</h3>
+            <p class="text-muted mb-3">Люди, которые родились в городе и прославили его в науке, культуре и спорте.</p>
+            <a href="people.html" class="btn btn-primary">Перейти к известным людям &rarr;</a>
+        </div>
     </main>
 
     <!-- Подвал страницы -->
@@ -106,6 +353,35 @@
             </div>
         </div>
     </footer>
+
+    <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="infoModalLabel">Памятка туристу по Шиханам</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Как добраться:</h6>
+                    <p class="text-muted">
+                        От автовокзала Стерлитамака ходят регулярные рейсовые автобусы и маршрутные такси до подножия горы Торатау (около 25-30 минут в пути).
+                    </p>
+
+                    <h6>Правила геопарка:</h6>
+                    <ul class="text-muted mb-0">
+                        <li>Поднимайтесь только по оборудованной экотропе и лестнице.</li>
+                        <li>Не срывайте растения из красной книги.</li>
+                        <li>Не мусорьте и уносите с собой весь мусор.</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                        Понятно
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Скрипт Bootstrap JS Bundle -->
     <script
