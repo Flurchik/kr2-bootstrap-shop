@@ -77,10 +77,304 @@
 
     <!-- Основной контент страницы -->
     <main class="container my-5 flex-grow-1">
-        <h2 class="h3 mb-3">История города</h2>
-        <p class="text-muted">
-            Раздел находится в разработке. Здесь будет представлена летопись города со времён Ашкадарской соляной пристани.
+        <nav aria-label="breadcrumb" class="mb-4">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="index.html">
+                        Главная
+                    </a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">
+                    История города
+                </li>
+            </ol>
+        </nav>
+
+        <h1 class="display-5 fw-bold mb-3">
+            История Стерлитамака
+        </h1>
+        <p class="lead text-muted mb-4">
+            От основания соляной пристани в XVIII веке до первой столицы советской Башкирии и крупного индустриального центра.
         </p>
+
+        <div class="alert alert-primary shadow-sm mb-5" role="alert">
+            <h4 class="alert-heading h5">Исторический факт</h4>
+            <p class="mb-0">С 1919 по 1922 год Стерлитамак имел статус <strong>первой столицы</strong> Автономной Башкирской Советской Республики, сыграв ключевую роль в становлении современной государственности Башкортостана.</p>
+        </div>
+
+        <h2 class="h3 mb-4">Основные вехи развития города</h2>
+        <div class="d-flex flex-column gap-4 mb-5">
+            <!-- 1. Ашкадарская соляная пристань -->
+            <div class="card shadow-sm border-0 overflow-hidden">
+                <div class="row g-0 align-items-center">
+                    <div class="col-12 col-md-5 col-lg-4 text-center p-3 p-lg-4">
+                        <img src="images/history-pristan.jpg" class="img-fluid rounded shadow-sm w-100" alt="Ашкадарская соляная пристань" style="height: 240px; object-fit: cover;">
+                    </div>
+                    <div class="col-12 col-md-7 col-lg-8">
+                        <div class="card-body p-3 p-lg-4">
+                            <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-2">
+                                <span class="badge bg-light text-dark border fs-6">1766 год</span>
+                                <span class="text-muted small fw-semibold">Основание поселения</span>
+                            </div>
+                            <h3 class="card-title h4 mb-3">Ашкадарская соляная пристань и рождение города</h3>
+                            <p class="card-text text-muted mb-2">
+                                В середине XVIII века возникла острая государственная необходимость в транспортировке соли из богатейших Илецких копей в центральные губернии Российской империи. Симбирский купец Савва Тетюшев разработал масштабный проект водного пути и предложил основать в устье реки Стерли при впадении в Ашкадар перевалочный пункт.
+                            </p>
+                            <p class="card-text text-muted mb-0">
+                                Весной 1766 года здесь развернулось строительство соляных складов, казачьих изб и верфи для постройки речных барок-коломенок. Уже в первую навигацию по реке Белой ушёл караван с сотнями тысяч пудов соли в Нижний Новгород и Казань. Именно соляной промысел вдохнул жизнь в будущее поселение.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Уездный купеческий город -->
+            <div class="card shadow-sm border-0 overflow-hidden">
+                <div class="row g-0 align-items-center">
+                    <div class="col-12 col-md-5 col-lg-4 text-center p-3 p-lg-4 d-flex align-items-center justify-content-center">
+                        <img src="images/history-gerb.jpg" class="img-fluid rounded shadow-sm" alt="Герб и купеческий город Стерлитамак" style="max-height: 240px; width: auto; object-fit: contain;">
+                    </div>
+                    <div class="col-12 col-md-7 col-lg-8">
+                        <div class="card-body p-3 p-lg-4">
+                            <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-2">
+                                <span class="badge bg-light text-dark border fs-6">1781 год</span>
+                                <span class="text-muted small fw-semibold">Статус уездного города</span>
+                            </div>
+                            <h3 class="card-title h4 mb-3">Уездный купеческий центр и екатерининский герб</h3>
+                            <p class="card-text text-muted mb-2">
+                                Благодаря бурному росту торговли 23 декабря 1781 года указом императрицы Екатерины II слобода получила статус уездного города Стерлитамак в составе Уфимского наместничества. А в 1782 году был утверждён исторический герб: три серебряных гуся на золотом поле, символизирующие изобилие птицы в чистых водоёмах края.
+                            </p>
+                            <p class="card-text text-muted mb-0">
+                                В XIX веке город превратился в оживлённый торгово-промышленный узел Южного Урала. Купеческие династии Баязитовых, Кузнецовых и Дьяконовых строили кирпичные усадьбы, открывали торговые пассажи, кожевенные и мыловаренные заводы, сформировав неповторимый колорит купеческого Старого города.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Первая столица Башкирии -->
+            <div class="card shadow-sm border-0 overflow-hidden">
+                <div class="row g-0 align-items-center">
+                    <div class="col-12 col-md-5 col-lg-4 text-center p-3 p-lg-4">
+                        <img src="images/history-capital.jpg" class="img-fluid rounded shadow-sm w-100" alt="Первая столица советской Башкирии" style="height: 240px; object-fit: cover;">
+                    </div>
+                    <div class="col-12 col-md-7 col-lg-8">
+                        <div class="card-body p-3 p-lg-4">
+                            <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-2">
+                                <span class="badge bg-light text-dark border fs-6">1919–1922 гг.</span>
+                                <span class="text-muted small fw-semibold">Столица республики</span>
+                            </div>
+                            <h3 class="card-title h4 mb-3">Первая столица Автономной Советской Башкирии</h3>
+                            <p class="card-text text-muted mb-2">
+                                В переломный период после революции и Гражданской войны Стерлитамак стал колыбелью современной башкирской автономии. В 1919 году он был провозглашён первой столицей только что созданной Автономной Башкирской Советской Республики (АБСР).
+                            </p>
+                            <p class="card-text text-muted mb-0">
+                                На протяжении трёх лет в городе работали БашЦИК, Совнарком и наркоматы республики. Здесь принимались фундаментальные решения по государственному устройству, развивалось национальное образование, открывались первые издательства и профессиональные театры, пока в 1922 году столичный статус не перешёл к Уфе.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Город в годы ВОВ -->
+            <div class="card shadow-sm border-0 overflow-hidden">
+                <div class="row g-0 align-items-center">
+                    <div class="col-12 col-md-5 col-lg-4 text-center p-3 p-lg-4">
+                        <img src="images/history-war.jpg" class="img-fluid rounded shadow-sm w-100" alt="Стерлитамак в годы Великой Отечественной войны" style="height: 240px; object-fit: cover;">
+                    </div>
+                    <div class="col-12 col-md-7 col-lg-8">
+                        <div class="card-body p-3 p-lg-4">
+                            <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-2">
+                                <span class="badge bg-light text-dark border fs-6">1941–1945 гг.</span>
+                                <span class="text-muted small fw-semibold">Тыл и госпитали</span>
+                            </div>
+                            <h3 class="card-title h4 mb-3">Индустриальный арсенал фронта и город милосердия</h3>
+                            <p class="card-text text-muted mb-2">
+                                В годы Великой Отечественной войны Стерлитамак принял десятки эвакуированных предприятий из западных регионов СССР: Одесский станкостроительный завод, Бакинский машиностроительный завод «Красный пролетарий», цеха Московского завода «Калибр», а также Славянский содовый завод.
+                            </p>
+                            <p class="card-text text-muted mb-0">
+                                В неимоверно сжатые сроки оборудование запускали прямо с колёс. Стерлитамак бесперебойно снабжал фронт высокоточными станками, корпусами снарядов и авиационным топливом. В учебных заведениях города действовали тыловые госпитали, вернувшие в строй тысячи раненых защитников Отечества.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. Содовая столица -->
+            <div class="card shadow-sm border-0 overflow-hidden">
+                <div class="row g-0 align-items-center">
+                    <div class="col-12 col-md-5 col-lg-4 text-center p-3 p-lg-4">
+                        <img src="images/history-soda.jpg" class="img-fluid rounded shadow-sm w-100" alt="Рождение содовой промышленности" style="height: 240px; object-fit: cover;">
+                    </div>
+                    <div class="col-12 col-md-7 col-lg-8">
+                        <div class="card-body p-3 p-lg-4">
+                            <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-2">
+                                <span class="badge bg-light text-dark border fs-6">Вторая пол. XX в.</span>
+                                <span class="text-muted small fw-semibold">Химический гигант</span>
+                            </div>
+                            <h3 class="card-title h4 mb-3">Рождение химического флагмана и «Содовой столицы»</h3>
+                            <p class="card-text text-muted mb-2">
+                                Открытие гигантских известняковых запасов в Шиханах положило начало строительству крупнейшего содово-цементного комбината. В ноябре 1951 года предприятие выдало первую промышленную партию кальцинированной соды, сделав город лидером союзного масштаба.
+                            </p>
+                            <p class="card-text text-muted mb-0">
+                                Вслед за содовым гигантом появились предприятия по производству синтетического каучука, каустической соды и полимеров. Именно тогда была создана знаменитая оранжево-бело-жёлтая пачка пищевой соды, которая по сей день выпускается в Стерлитамаке и присутствует буквально в каждом доме страны.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. Стерлитамакский метеорит -->
+            <div class="card shadow-sm border-0 overflow-hidden">
+                <div class="row g-0 align-items-center">
+                    <div class="col-12 col-md-5 col-lg-4 text-center p-3 p-lg-4">
+                        <img src="images/history-meteorite.jpg" class="img-fluid rounded shadow-sm w-100" alt="Стерлитамакский метеорит 1990 года" style="height: 240px; object-fit: cover;">
+                    </div>
+                    <div class="col-12 col-md-7 col-lg-8">
+                        <div class="card-body p-3 p-lg-4">
+                            <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-2">
+                                <span class="badge bg-light text-dark border fs-6">1990 год</span>
+                                <span class="text-muted small fw-semibold">Космическое явление</span>
+                            </div>
+                            <h3 class="card-title h4 mb-3">Космический гость: Стерлитамакский метеорит</h3>
+                            <p class="card-text text-muted mb-2">
+                                В ночь на 17 мая 1990 года небо над городом прорезал ослепительный болид, за которым последовали громоподобный удар и содрогание почвы. В 20 км к западу от Стерлитамака, на совхозном поле, образовался кратер диаметром 10 метров и глубиной около 5 метров.
+                            </p>
+                            <p class="card-text text-muted mb-0">
+                                Экспедиция Института геохимии АН СССР извлекла из глины основной монолит массой 315 кг. Он оказался редким железным метеоритом возрастом свыше 4 миллиардов лет. Это падение вошло в число важнейших метеоритных событий XX века, а сам метеорит стал ценнейшим экспонатом научных музеев.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7. Самый благоустроенный город России -->
+            <div class="card shadow-sm border-0 overflow-hidden">
+                <div class="row g-0 align-items-center">
+                    <div class="col-12 col-md-5 col-lg-4 text-center p-3 p-lg-4">
+                        <img src="images/history-comfort.jpg" class="img-fluid rounded shadow-sm w-100" alt="Благоустроенный Стерлитамак" style="height: 240px; object-fit: cover;">
+                    </div>
+                    <div class="col-12 col-md-7 col-lg-8">
+                        <div class="card-body p-3 p-lg-4">
+                            <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-2">
+                                <span class="badge bg-light text-dark border fs-6">1997–2012 гг.</span>
+                                <span class="text-muted small fw-semibold">Благоустройство и признание</span>
+                            </div>
+                            <h3 class="card-title h4 mb-3">«Золотой» город: самый благоустроенный в России</h3>
+                            <p class="card-text text-muted mb-2">
+                                Стерлитамак по праву считается одним из самых зелёных и чистых городов не только Башкортостана, но и всей России. Во Всероссийском конкурсе на звание «Самый благоустроенный город России» Стерлитамак трижды — по итогам 1997, 2002 и 2005 годов — занимал второе место среди городов с населением свыше 100 тысяч человек.
+                            </p>
+                            <p class="card-text text-muted mb-0">
+                                По итогам 2006 и 2012 годов Стерлитамак стал абсолютным победителем этого престижного конкурса, дважды став «золотым» городом России. Развитая сеть экологичного троллейбусного транспорта, ухоженные скверы, цветущие проспекты и каскады фонтанов закрепили за городом статус образцового муниципалитета.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 8. XXI век и наши дни -->
+            <div class="card shadow-sm border-0 overflow-hidden">
+                <div class="row g-0 align-items-center">
+                    <div class="col-12 col-md-5 col-lg-4 text-center p-3 p-lg-4">
+                        <img src="images/kushtau.jpg" class="img-fluid rounded shadow-sm w-100" alt="Шихан Куштау — памятник природы" style="height: 240px; object-fit: cover;">
+                    </div>
+                    <div class="col-12 col-md-7 col-lg-8">
+                        <div class="card-body p-3 p-lg-4">
+                            <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-2">
+                                <span class="badge bg-light text-dark border fs-6">2020-е гг. — наши дни</span>
+                                <span class="text-muted small fw-semibold">Экотуризм и развитие</span>
+                            </div>
+                            <h3 class="card-title h4 mb-3">Защита Шиханов и новый облик южной столицы</h3>
+                            <p class="card-text text-muted mb-2">
+                                В августе 2020 года город оказался в центре внимания всей страны во время событий вокруг древнего шихана Куштау. Массовая солидарность жителей Стерлитамака и всей республики позволила защитить уникальный природный памятник: Куштау получил охранный статус заказника, а весь массив Шиханов вошёл в геопарк ЮНЕСКО «Торатау».
+                            </p>
+                            <p class="card-text text-muted mb-0">
+                                Сегодня Стерлитамак — крупнейший индустриальный, научный и студенческий центр региона с населением более 280 тысяч человек. В городе масштабно преображаются набережные рек Стерли и Ашкадар, благоустраиваются экопарки, реставрируется исторический купеческий центр, а промышленность развивает технологии «зелёной химии».
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="h3 mb-4">Интересные исторические вопросы</h2>
+        <div class="accordion shadow-sm mb-5" id="historyAccordion">
+            <!-- Первый вопрос -->
+            <div class="accordion-item">
+                <h3 class="accordion-header" id="headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        Почему на гербе Стерлитамака изображены три гуся?
+                    </button>
+                </h3>
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#historyAccordion">
+                    <div class="accordion-body">
+                        Герб был пожалован городу императрицей Екатериной II в 1782 году. В официальном описании указано: <em>«В верхней части щита герб Уфимский... в нижней — три плавающих серебряных диких гуся в золотом поле, в знак великого изобилия оных птиц»</em> в местных озёрах и реках.
+                    </div>
+                </div>
+            </div>
+            <!-- Второй вопрос -->
+            <div class="accordion-item">
+                <h3 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Откуда пошло название города и реки Стерля?
+                    </button>
+                </h3>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#historyAccordion">
+                    <div class="accordion-body">
+                        Название города складывается из гидронима реки <strong>Стерля</strong> и тюркского слова <strong>«тамак»</strong>, что переводится как «горло» или «устье». То есть Стерлитамак дословно означает <em>«город в устье реки Стерля»</em>.
+                    </div>
+                </div>
+            </div>
+            <!-- Третий вопрос -->
+            <div class="accordion-item">
+                <h3 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Какую роль город сыграл в годы Великой Отечественной войны?
+                    </button>
+                </h3>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#historyAccordion">
+                    <div class="accordion-body">
+                        В Стерлитамак были эвакуированы ключевые оборонные заводы: Одесский станкостроительный, Бакинский машиностроительный «Красный пролетарий», цеха Московского завода «Калибр». Город выпускал высокоточные станки, снаряды для фронта, авиационное топливо и синтетический каучук.
+                    </div>
+                </div>
+            </div>
+            <!-- Четвертый вопрос -->
+            <div class="accordion-item">
+                <h3 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Как был найден Стерлитамакский метеорит 1990 года?
+                    </button>
+                </h3>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#historyAccordion">
+                    <div class="accordion-body">
+                        Ночью 17 мая 1990 года жители города наблюдали яркий огненный шар-болид и услышали сильнейший грохот. На совхозном поле в 20 км к западу от города образовался кратер глубиной около 5 метров. Позже экспедиция Академии наук СССР извлекла основной фрагмент весом 315 кг, который стал вторым по величине железным метеоритом, найденным в России.
+                    </div>
+                </div>
+            </div>
+            <!-- Пятый вопрос -->
+            <div class="accordion-item">
+                <h3 class="accordion-header" id="headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        Почему пищевая сода из Стерлитамака стала всенародно узнаваемой?
+                    </button>
+                </h3>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#historyAccordion">
+                    <div class="accordion-body">
+                        Стерлитамакская содовая компания производит более 85% всей пищевой соды в России. Знаменитый узнаваемый красно-жёлто-белый дизайн пачки не менялся десятилетиями и превратился в настоящий культовый символ стабильности и уюта на кухнях миллионов семей.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center p-4 bg-white border rounded shadow-sm">
+            <h3 class="h5 mb-2">Хотите узнать об уникальной природе вокруг города?</h3>
+            <p class="text-muted mb-3">
+                Познакомьтесь с древними коралловыми рифами — Шиханами и живописными реками Стерлитамака.
+            </p>
+            <a href="nature.html" class="btn btn-primary">
+                Перейти к природе и архитектуре
+            </a>
+        </div> 
     </main>
 
     <!-- Подвал страницы -->
