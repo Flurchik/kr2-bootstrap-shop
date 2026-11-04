@@ -1,0 +1,14 @@
+body {
+  min-height: 100vh;
+}
+
+.placeholder-box {
+  min-height: 240px;
+}
+
+/* Одинаковая аккуратная высота картинок в карточках */
+.card-img-custom {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
