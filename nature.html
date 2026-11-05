@@ -3,39 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="images/Gerb-Sterlitamak-icon.svg">
     <title>Природа и архитектура — Информационно-туристический портал про Стерлитамак</title>
-    <!-- Локальное подключение Bootstrap CSS -->
     <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
-    <!-- Подключение собственных стилей -->
     <link rel="stylesheet" href="css/custom.css">
 </head>
 <body class="d-flex flex-column min-vh-100">
 
-    <!-- Шапка страницы -->
-    <header class="bg-primary text-white py-4">
+    <header class="navbar navbar-expand-lg navbar-dark bg-success shadow-sm py-2 py-lg-3 sticky-top header-nav">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-12 col-md-8">
-                    <h1 class="h3 mb-1">Информационно-туристический портал про "Стерлитамак"</h1>
-                    <p class="mb-0 opacity-75">
-                        Город Стерлитамак: история, уникальная природа и выдающиеся люди
-                    </p>
-                </div>
-                <div class="col-12 col-md-4 text-md-end mt-3 mt-md-0">
-                    <span class="badge bg-light text-primary">
-                        КР №2
+            <a class="navbar-brand d-flex align-items-center gap-3 me-3 text-white" href="index.html">
+                <img src="images/Gerb-Sterlitamak-icon.svg" alt="Герб Стерлитамака" width="45" height="52" class="img-fluid flex-shrink-0">
+                <div class="d-flex flex-column">
+                    <span class="fs-4 fw-bold lh-1">Стерлитамак</span>
+                    <span class="small opacity-75 d-none d-sm-block mt-1" style="font-size: 0.75rem;">
+                        Информационно-туристический портал
                     </span>
                 </div>
-            </div>
-        </div>
-    </header>
+            </a>
 
-    <!-- Навигация -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">Стерлитамак</a>
             <button
-                class="navbar-toggler"
+                class="navbar-toggler border-white-50"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#mainNavbar"
@@ -45,8 +33,9 @@
             >
                 <span class="navbar-toggler-icon"></span>
             </button>
+
             <div class="collapse navbar-collapse" id="mainNavbar">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-1">
                     <li class="nav-item">
                         <a class="nav-link" href="index.html">
                             Главная
@@ -67,12 +56,26 @@
                             Известные люди
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacts.html">
+                            Контакты
+                        </a>
+                    </li>
                 </ul>
+
+                <div class="d-flex align-items-center gap-3 pt-3 pt-lg-0 mt-3 mt-lg-0">
+                    <div class="text-lg-end text-white">
+                        <span class="small opacity-75 d-block lh-1" style="font-size: 0.72rem;">Инфоцентр:</span>
+                        <a href="tel:+79999999999" class="text-white text-decoration-none fw-bold small">+7 (999) 999-99-99</a>
+                    </div>
+                    <button type="button" class="btn btn-light btn-sm text-success fw-semibold px-3" data-bs-toggle="modal" data-bs-target="#helpModal">
+                        Справка
+                    </button>
+                </div>
             </div>
         </div>
-    </nav>
+    </header>
 
-    <!-- Основной контент страницы -->
     <main class="container my-5 flex-grow-1">
         <nav aria-label="breadcrumb" class="mb-4">
             <ol class="breadcrumb">
@@ -86,7 +89,7 @@
                 <h1 class="display-5 fw-bold mb-1">Природа и архитектура</h1>
                 <p class="lead text-muted mb-0">Уникальные шиханы, реки и старинный купеческий колорит Стерлитамака.</p>
             </div>
-            <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#infoModal">
+            <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#infoModal">
                 Памятка туристу
             </button>
         </div>
@@ -100,7 +103,6 @@
 
         <h2 class="h3 mb-4">Природные красоты</h2>
         <div class="d-flex flex-column gap-4 mb-5">
-            <!-- 1. Шихан Торатау -->
             <div class="card shadow-sm border-0 overflow-hidden">
                 <div class="row g-0 align-items-center">
                     <div class="col-12 col-md-5 col-lg-4 text-center p-3 p-lg-4">
@@ -124,7 +126,6 @@
                 </div>
             </div>
 
-            <!-- 2. Шихан Куштау -->
             <div class="card shadow-sm border-0 overflow-hidden">
                 <div class="row g-0 align-items-center">
                     <div class="col-12 col-md-5 col-lg-4 text-center p-3 p-lg-4">
@@ -148,7 +149,6 @@
                 </div>
             </div>
 
-            <!-- 3. Шихан Юрактау -->
             <div class="card shadow-sm border-0 overflow-hidden">
                 <div class="row g-0 align-items-center">
                     <div class="col-12 col-md-5 col-lg-4 text-center p-3 p-lg-4">
@@ -172,7 +172,6 @@
                 </div>
             </div>
 
-            <!-- 4. Реки города -->
             <div class="card shadow-sm border-0 overflow-hidden">
                 <div class="row g-0 align-items-center">
                     <div class="col-12 col-md-5 col-lg-4 text-center p-3 p-lg-4">
@@ -199,7 +198,6 @@
 
         <h2 class="h3 mb-4">Архитектурное наследие города</h2>
         <div class="d-flex flex-column gap-4 mb-5">
-            <!-- 1. Бывшая земская управа -->
             <div class="card shadow-sm border-0 overflow-hidden">
                 <div class="row g-0 align-items-center">
                     <div class="col-12 col-md-5 col-lg-4 text-center p-3 p-lg-4">
@@ -223,7 +221,6 @@
                 </div>
             </div>
 
-            <!-- 2. Никольский кафедральный собор -->
             <div class="card shadow-sm border-0 overflow-hidden">
                 <div class="row g-0 align-items-center">
                     <div class="col-12 col-md-5 col-lg-4 text-center p-3 p-lg-4">
@@ -247,7 +244,6 @@
                 </div>
             </div>
 
-            <!-- 3. Историко-краеведческий музей -->
             <div class="card shadow-sm border-0 overflow-hidden">
                 <div class="row g-0 align-items-center">
                     <div class="col-12 col-md-5 col-lg-4 text-center p-3 p-lg-4">
@@ -271,7 +267,6 @@
                 </div>
             </div>
 
-            <!-- 4. Кинотеатр «Салават» -->
             <div class="card shadow-sm border-0 overflow-hidden">
                 <div class="row g-0 align-items-center">
                     <div class="col-12 col-md-5 col-lg-4 text-center p-3 p-lg-4">
@@ -295,7 +290,6 @@
                 </div>
             </div>
 
-            <!-- 5. Русский драматический театр -->
             <div class="card shadow-sm border-0 overflow-hidden">
                 <div class="row g-0 align-items-center">
                     <div class="col-12 col-md-5 col-lg-4 text-center p-3 p-lg-4">
@@ -323,29 +317,66 @@
         <div class="text-center p-4 bg-white border rounded shadow-sm">
             <h3 class="h5 mb-2">Узнайте о выдающихся личностях Стерлитамака</h3>
             <p class="text-muted mb-3">Люди, которые родились в городе и прославили его в науке, культуре и спорте.</p>
-            <a href="people.html" class="btn btn-primary">Перейти к известным людям &rarr;</a>
+            <a href="people.html" class="btn btn-success">Перейти к известным людям &rarr;</a>
         </div>
     </main>
 
-    <!-- Подвал страницы -->
-    <footer class="bg-dark text-white py-4 mt-auto">
+    <footer class="bg-dark text-white py-5 mt-auto">
         <div class="container">
-            <div class="row align-items-center g-3">
-                <div class="col-12 col-md-6">
-                    <p class="mb-0">
-                        &copy; 2026 Информационно-туристический портал про "Стерлитамак". Собачкин Кирилл.
+            <div class="row g-4">
+                <div class="col-12 col-md-4">
+                    <div class="d-flex align-items-center gap-2 mb-3">
+                        <img src="images/Gerb-Sterlitamak-icon.svg" alt="Герб Стерлитамака" width="30" height="35">
+                        <h5 class="mb-0 fw-bold">Стерлитамак</h5>
+                    </div>
+                    <p class="text-white-50 small mb-3">
+                        Информационно-туристический портал: история основания соляной пристани, уникальные шиханы, памятники архитектуры и выдающиеся земляки.
+                    </p>
+                    <p class="text-white-50 small mb-0">
+                        &copy; 2026 Информационно-туристический портал «Стерлитамак». Все права защищены.
                     </p>
                 </div>
-                <div class="col-12 col-md-6 text-md-end">
-                    <a class="text-white text-decoration-none me-3" href="history.html">
-                        История
-                    </a>
-                    <a class="text-white text-decoration-none me-3" href="nature.html">
-                        Природа
-                    </a>
-                    <a class="text-white text-decoration-none" href="people.html">
-                        Известные люди
-                    </a>
+
+                <div class="col-12 col-sm-6 col-md-4">
+                    <h5 class="fw-bold mb-3">Навигация</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2">
+                            <a class="footer-link text-decoration-none" href="history.html">История города</a>
+                        </li>
+                        <li class="mb-2">
+                            <a class="footer-link text-decoration-none" href="nature.html">Природа и архитектура</a>
+                        </li>
+                        <li class="mb-2">
+                            <a class="footer-link text-decoration-none" href="people.html">Известные люди</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4">
+                    <h5 class="fw-bold mb-3">Контакты</h5>
+                    <ul class="list-unstyled text-white-50 small mb-0">
+                        <li class="mb-2">
+                            <strong class="text-white">Адрес:</strong><br>
+                            г. Стерлитамак
+                        </li>
+                        <li class="mb-2">
+                            <strong class="text-white">Телефон:</strong><br>
+                            <a href="tel:+79999999999" class="text-white-50 text-decoration-none">+7 (999) 999-99-99</a>
+                        </li>
+                        <li class="mb-2">
+                            <strong class="text-white">Электронная почта:</strong><br>
+                            <a href="mailto:info@example.com" class="text-white-50 text-decoration-none">info@example.com</a>
+                        </li>
+                        <li class="mb-3">
+                            <strong class="text-white">Режим работы:</strong><br>
+                            Пн–Пт с 09:00 до 18:00
+                        </li>
+                        <li>
+                            <a href="contacts.html" class="btn btn-outline-light btn-sm">
+                                Страница контактов &rarr;
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -380,7 +411,38 @@
         </div>
     </div>
 
-    <!-- Локальное подключение Bootstrap JS Bundle -->
+    <div class="modal fade" id="helpModal" tabindex="-1" aria-labelledby="helpModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title" id="helpModalLabel">Справочная информация</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-muted">Информационно-туристический портал города Стерлитамак.</p>
+                    <ul class="list-group list-group-flush mb-3">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span>Горячая линия инфоцентра:</span>
+                            <a href="tel:+79999999999" class="fw-bold text-decoration-none">+7 (999) 999-99-99</a>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span>Электронная почта:</span>
+                            <a href="mailto:info@example.com" class="text-decoration-none">info@example.com</a>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span>Служба спасения:</span>
+                            <span class="badge bg-danger fs-6">112</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <a href="contacts.html" class="btn btn-success">Раздел контактов</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

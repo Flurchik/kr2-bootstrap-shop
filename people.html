@@ -3,39 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="images/Gerb-Sterlitamak-icon.svg">
     <title>Известные люди — Информационно-туристический портал про Стерлитамак</title>
-    <!-- Локальное подключение Bootstrap CSS -->
     <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
-    <!-- Подключение собственных стилей -->
     <link rel="stylesheet" href="css/custom.css">
 </head>
 <body class="d-flex flex-column min-vh-100">
 
-    <!-- Шапка страницы -->
-    <header class="bg-primary text-white py-4">
+    <header class="navbar navbar-expand-lg navbar-dark bg-success shadow-sm py-2 py-lg-3 sticky-top header-nav">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-12 col-md-8">
-                    <h1 class="h3 mb-1">Информационно-туристический портал про "Стерлитамак"</h1>
-                    <p class="mb-0 opacity-75">
-                        Город Стерлитамак: история, уникальная природа и выдающиеся люди
-                    </p>
-                </div>
-                <div class="col-12 col-md-4 text-md-end mt-3 mt-md-0">
-                    <span class="badge bg-light text-primary">
-                        КР №2
+            <a class="navbar-brand d-flex align-items-center gap-3 me-3 text-white" href="index.html">
+                <img src="images/Gerb-Sterlitamak-icon.svg" alt="Герб Стерлитамака" width="45" height="52" class="img-fluid flex-shrink-0">
+                <div class="d-flex flex-column">
+                    <span class="fs-4 fw-bold lh-1">Стерлитамак</span>
+                    <span class="small opacity-75 d-none d-sm-block mt-1" style="font-size: 0.75rem;">
+                        Информационно-туристический портал
                     </span>
                 </div>
-            </div>
-        </div>
-    </header>
+            </a>
 
-    <!-- Навигация -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">Стерлитамак</a>
             <button
-                class="navbar-toggler"
+                class="navbar-toggler border-white-50"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#mainNavbar"
@@ -45,8 +33,9 @@
             >
                 <span class="navbar-toggler-icon"></span>
             </button>
+
             <div class="collapse navbar-collapse" id="mainNavbar">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-1">
                     <li class="nav-item">
                         <a class="nav-link" href="index.html">
                             Главная
@@ -67,12 +56,26 @@
                             Известные люди
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacts.html">
+                            Контакты
+                        </a>
+                    </li>
                 </ul>
+
+                <div class="d-flex align-items-center gap-3 pt-3 pt-lg-0 mt-3 mt-lg-0">
+                    <div class="text-lg-end text-white">
+                        <span class="small opacity-75 d-block lh-1" style="font-size: 0.72rem;">Инфоцентр:</span>
+                        <a href="tel:+79999999999" class="text-white text-decoration-none fw-bold small">+7 (999) 999-99-99</a>
+                    </div>
+                    <button type="button" class="btn btn-light btn-sm text-success fw-semibold px-3" data-bs-toggle="modal" data-bs-target="#helpModal">
+                        Справка
+                    </button>
+                </div>
             </div>
         </div>
-    </nav>
+    </header>
 
-    <!-- Основной контент страницы -->
     <main class="container my-5 flex-grow-1">
         <nav aria-label="breadcrumb" class="mb-4">
             <ol class="breadcrumb">
@@ -104,9 +107,52 @@
                         <div class="card-body">
                             <h3 class="card-title h5 mb-1">Татьяна Анциферова</h3>
                             <p class="text-muted small mb-2">род. 1954 г. &bull; Эстрадная певица</p>
-                            <p class="card-text text-muted mb-0">
+                            <p class="card-text text-muted mb-2">
                                 Родилась в Стерлитамаке. Легендарный голос советской эстрады, исполнительница всенародно любимых песен «Ищу тебя» (из к/ф «31 июня») и прощального гимна Олимпиады-80 «До свиданья, Москва».
                             </p>
+                            <button type="button" class="btn btn-sm btn-outline-success" data-bs-toggle="modal" data-bs-target="#modalAnciferova">
+                                Подробнее о творчестве
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card shadow-sm border-0">
+                <div class="row g-0 align-items-center">
+                    <div class="col-12 col-md-4 col-lg-3 text-center p-3">
+                        <img src="images/baranova.jpg" class="rounded-circle shadow-sm" alt="Лариса Баранова" style="width: 140px; height: 140px; object-fit: cover;">
+                    </div>
+                    <div class="col-12 col-md-8 col-lg-9">
+                        <div class="card-body">
+                            <h3 class="card-title h5 mb-1">Лариса Павловна Баранова</h3>
+                            <p class="text-muted small mb-2">род. 1982 г. &bull; Актриса театра и кино</p>
+                            <p class="card-text text-muted mb-2">
+                                Родилась в Стерлитамаке, выпускница Башкирского республиканского техникума культуры и Театрального института им. Б. Щукина. Яркая актриса театра и кино, полюбившаяся миллионам зрителей по роли Лили Волковой в культовых телесериалах «Универ» и «СашаТаня».
+                            </p>
+                            <button type="button" class="btn btn-sm btn-outline-success" data-bs-toggle="modal" data-bs-target="#modalBaranova">
+                                Биография и роли
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card shadow-sm border-0">
+                <div class="row g-0 align-items-center">
+                    <div class="col-12 col-md-4 col-lg-3 text-center p-3">
+                        <img src="images/soldatova.jpg" class="rounded-circle shadow-sm" alt="Александра Солдатова" style="width: 140px; height: 140px; object-fit: cover;">
+                    </div>
+                    <div class="col-12 col-md-8 col-lg-9">
+                        <div class="card-body">
+                            <h3 class="card-title h5 mb-1">Александра Сергеевна Солдатова</h3>
+                            <p class="text-muted small mb-2">род. 1998 г. &bull; Художественная гимнастика, заслуженный мастер спорта</p>
+                            <p class="card-text text-muted mb-2">
+                                Родилась в Стерлитамаке, где в возрасте пяти лет начала свой путь в художественной гимнастике. Четырёхкратная чемпионка мира, трёхкратная чемпионка Европы и многократная победительница этапов Кубка мира в индивидуальных упражнениях.
+                            </p>
+                            <button type="button" class="btn btn-sm btn-outline-success" data-bs-toggle="modal" data-bs-target="#modalSoldatova">
+                                Спортивные достижения
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -121,9 +167,12 @@
                         <div class="card-body">
                             <h3 class="card-title h5 mb-1">Ирек Зарипов</h3>
                             <p class="text-muted small mb-2">род. 1983 г. &bull; Спортсмен, паралимпийский чемпион</p>
-                            <p class="card-text text-muted mb-0">
+                            <p class="card-text text-muted mb-2">
                                 Родился и вырос в Стерлитамаке. Заслуженный мастер спорта России по биатлону и лыжным гонкам, четырёхкратный чемпион Паралимпиады 2010 года в Ванкувере. Почётный гражданин города.
                             </p>
+                            <button type="button" class="btn btn-sm btn-outline-success" data-bs-toggle="modal" data-bs-target="#modalZaripov">
+                                Паралимпийский триумф
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -138,9 +187,12 @@
                         <div class="card-body">
                             <h3 class="card-title h5 mb-1">Татьяна Лебедева</h3>
                             <p class="text-muted small mb-2">род. 1976 г. &bull; Олимпийская чемпионка, лёгкая атлетика</p>
-                            <p class="card-text text-muted mb-0">
+                            <p class="card-text text-muted mb-2">
                                 Родилась в Стерлитамаке, где и начала путь в лёгкой атлетике. Олимпийская чемпионка 2004 года в Афинах, многократная чемпионка мира в прыжках в длину и тройном прыжке, заслуженный мастер спорта России.
                             </p>
+                            <button type="button" class="btn btn-sm btn-outline-success" data-bs-toggle="modal" data-bs-target="#modalLebedeva">
+                                Олимпийские победы
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -155,34 +207,289 @@
                         <div class="card-body">
                             <h3 class="card-title h5 mb-1">Евгений Баженов (BadComedian)</h3>
                             <p class="text-muted small mb-2">род. 1991 г. &bull; Видеоблогер, кинообозреватель</p>
-                            <p class="card-text text-muted mb-0">
-                                Родился в Стерлитамаке. Ведущий популярнейшего авторского канала «BadComedian», один из самых известных и влиятельных кинокритиков и видеоблогеров Рунета с миллионной аудиторией.
+                            <p class="card-text text-muted mb-2">
+                                Родилась в Стерлитамаке. Ведущий популярнейшего авторского канала «BadComedian», один из самых известных и влиятельных кинокритиков и видеоблогеров Рунета с миллионной аудиторией.
                             </p>
+                            <button type="button" class="btn btn-sm btn-outline-success" data-bs-toggle="modal" data-bs-target="#modalBadcomedian">
+                                О проекте и влиянии
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Форма предложения известного земляка -->
         <section class="mt-5">
-            <div class="card shadow-sm border-0">
-                <div class="card-header bg-primary text-white py-3">
-                    <h2 class="h5 mb-0">Предложить выдающегося земляка</h2>
+            <div class="card shadow-sm border-0 text-center p-4 p-md-5 bg-light">
+                <div class="display-6 mb-2">⭐</div>
+                <h2 class="h4 fw-bold mb-3">Знаете выдающегося земляка?</h2>
+                <p class="text-muted col-lg-8 mx-auto mb-4">
+                    Знаете известного уроженца или жителя Стерлитамака, которого ещё нет в нашем каталоге? Нажмите кнопку ниже, заполните форму, и после проверки модератором статья появится на портале.
+                </p>
+                <div>
+                    <button type="button" class="btn btn-success btn-lg px-4 shadow-sm" data-bs-toggle="modal" data-bs-target="#modalProposePerson">
+                        Предложить выдающегося земляка
+                    </button>
                 </div>
-                <div class="card-body p-4">
-                    <p class="text-muted mb-4">
-                        Знаете известного уроженца или жителя Стерлитамака, которого нет в нашем списке? Заполните форму, и после проверки модератором информация появится на портале.
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white py-5 mt-auto">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-12 col-md-4">
+                    <div class="d-flex align-items-center gap-2 mb-3">
+                        <img src="images/Gerb-Sterlitamak-icon.svg" alt="Герб Стерлитамака" width="30" height="35">
+                        <h5 class="mb-0 fw-bold">Стерлитамак</h5>
+                    </div>
+                    <p class="text-white-50 small mb-3">
+                        Информационно-туристический портал: история основания соляной пристани, уникальные шиханы, памятники архитектуры и выдающиеся земляки.
                     </p>
-                    <form action="#" method="post">
+                    <p class="text-white-50 small mb-0">
+                        &copy; 2026 Информационно-туристический портал «Стерлитамак». Все права защищены.
+                    </p>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4">
+                    <h5 class="fw-bold mb-3">Навигация</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2">
+                            <a class="footer-link text-decoration-none" href="history.html">История города</a>
+                        </li>
+                        <li class="mb-2">
+                            <a class="footer-link text-decoration-none" href="nature.html">Природа и архитектура</a>
+                        </li>
+                        <li class="mb-2">
+                            <a class="footer-link text-decoration-none" href="people.html">Известные люди</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4">
+                    <h5 class="fw-bold mb-3">Контакты</h5>
+                    <ul class="list-unstyled text-white-50 small mb-0">
+                        <li class="mb-2">
+                            <strong class="text-white">Адрес:</strong><br>
+                            г. Стерлитамак
+                        </li>
+                        <li class="mb-2">
+                            <strong class="text-white">Телефон:</strong><br>
+                            <a href="tel:+79999999999" class="text-white-50 text-decoration-none">+7 (999) 999-99-99</a>
+                        </li>
+                        <li class="mb-2">
+                            <strong class="text-white">Электронная почта:</strong><br>
+                            <a href="mailto:info@example.com" class="text-white-50 text-decoration-none">info@example.com</a>
+                        </li>
+                        <li class="mb-3">
+                            <strong class="text-white">Режим работы:</strong><br>
+                            Пн–Пт с 09:00 до 18:00
+                        </li>
+                        <li>
+                            <a href="contacts.html" class="btn btn-outline-light btn-sm">
+                                Страница контактов &rarr;
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="helpModal" tabindex="-1" aria-labelledby="helpModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title" id="helpModalLabel">Справочная информация</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-muted">Информационно-туристический портал города Стерлитамак.</p>
+                    <ul class="list-group list-group-flush mb-3">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span>Горячая линия инфоцентра:</span>
+                            <a href="tel:+79999999999" class="fw-bold text-decoration-none">+7 (999) 999-99-99</a>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span>Электронная почта:</span>
+                            <a href="mailto:info@example.com" class="text-decoration-none">info@example.com</a>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span>Служба спасения:</span>
+                            <span class="badge bg-danger fs-6">112</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <a href="contacts.html" class="btn btn-success">Раздел контактов</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalBaranova" tabindex="-1" aria-labelledby="modalBaranovaLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalBaranovaLabel">Лариса Павловна Баранова</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center mb-3">
+                        <img src="images/baranova.jpg" alt="Лариса Баранова" class="rounded-circle shadow-sm" style="width: 130px; height: 130px; object-fit: cover;">
+                    </div>
+                    <p class="text-muted">
+                        Родилась 14 апреля 1982 года в городе Стерлитамаке. Первые шаги в актёрском мастерстве сделала в родном городе, с отличием окончив режиссёрское отделение Башкирского республиканского техникума культуры (БРТК). В 2006 году окончила Театральный институт имени Бориса Щукина в Москве.
+                    </p>
+                    <ul class="list-unstyled small text-muted">
+                        <li><strong>Известные роли:</strong> Лиля Волкова («Универ», «СашаТаня»), фильмы «Мы из будущего», «Бой с тенью 2: Реванш».</li>
+                        <li><strong>Театр:</strong> Роли в спектаклях Московского академического театра им. Вахтангова.</li>
+                        <li><strong>Связь с городом:</strong> Регулярно посещает Стерлитамак, проводит творческие встречи со студентами родного колледжа культуры.</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalSoldatova" tabindex="-1" aria-labelledby="modalSoldatovaLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalSoldatovaLabel">Александра Сергеевна Солдатова</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center mb-3">
+                        <img src="images/soldatova.jpg" alt="Александра Солдатова" class="rounded-circle shadow-sm" style="width: 130px; height: 130px; object-fit: cover;">
+                    </div>
+                    <p class="text-muted">
+                        Родилась 4 августа 1998 года в Стерлитамаке. В раннем детстве пришла в секцию спортивной гимнастики города, а затем перешла в художественную гимнастику, где проявила уникальную гибкость и грацию.
+                    </p>
+                    <ul class="list-unstyled small text-muted">
+                        <li><strong>Мировые титулы:</strong> Четырёхкратная чемпионка мира (2014, 2015, 2018), трёхкратная чемпионка Европы (2015, 2017, 2019).</li>
+                        <li><strong>Звание:</strong> Заслуженный мастер спорта России.</li>
+                        <li><strong>Особое достижение:</strong> Победительница финала Кубка мира в упражнении с лентой, признана одной из самых артистичных гимнасток в истории мировой гимнастики.</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalAnciferova" tabindex="-1" aria-labelledby="modalAnciferovaLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalAnciferovaLabel">Татьяна Владимировна Анциферова</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-muted">
+                        Советская и российская эстрадная певица, родившаяся в Стерлитамаке в 1954 году. Обладательница кристально чистого тембра, её исполнение романтических композиций Александра Зацепина к фильму «31 июня» («Ищу тебя», «Мир без любимого») стало золотым фондом отечественной музыки.
+                    </p>
+                    <p class="small text-muted mb-0">
+                        В 1980 году вместе со Львом Лещенко исполнила прощальную песню «До свиданья, Москва» на церемонии закрытия XXII летних Олимпийских игр в Москве.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalZaripov" tabindex="-1" aria-labelledby="modalZaripovLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalZaripovLabel">Ирек Айратович Зарипов</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-muted">
+                        Четырёхкратный паралимпийский чемпион 2010 года в Ванкувере (биатлон и лыжные гонки), серебряный призёр Игр, заслуженный мастер спорта России. Родился и живёт в Стерлитамаке.
+                    </p>
+                    <p class="small text-muted mb-0">
+                        Награждён орденом «За заслуги перед Отечеством» IV степени и орденом «За заслуги перед Республикой Башкортостан». Удостоен звания «Почётный гражданин города Стерлитамака».
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalLebedeva" tabindex="-1" aria-labelledby="modalLebedevaLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLebedevaLabel">Татьяна Романовна Лебедева</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-muted">
+                        Олимпийская чемпионка 2004 года в прыжках в длину, серебряный и бронзовый призёр Олимпийских игр в Сиднее, Афинах и Пекине, многократная чемпионка мира.
+                    </p>
+                    <p class="small text-muted mb-0">
+                        Родилась в Стерлитамаке, где тренировалась в спортивной школе города. Заслуженный мастер спорта России, президент Всероссийской ассоциации лёгкой атлетики среди юниоров.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalBadcomedian" tabindex="-1" aria-labelledby="modalBadcomedianLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalBadcomedianLabel">Евгений Николаевич Баженов</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-muted">
+                        Российский видеоблогер и кинокритик, создатель и автор самого популярного русскоязычного YouTube-канала с обзорами на кино «BadComedian» (более 5,5 млн подписчиков).
+                    </p>
+                    <p class="small text-muted mb-0">
+                        Родился в Стерлитамаке 24 мая 1991 года. Его обзоры и общественная деятельность существенно повлияли на отечественную киноиндустрию и стандарты кинопроизводства.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalProposePerson" tabindex="-1" aria-labelledby="modalProposePersonLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title" id="modalProposePersonLabel">Предложить выдающегося земляка</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <p class="text-muted mb-4">
+                        Знаете известного уроженца или жителя Стерлитамака, которого нет в нашем списке? Заполните форму, и после проверки модератором статья появится на портале.
+                    </p>
+                    <form id="personProposalForm">
                         <div class="row g-3">
                             <div class="col-12 col-md-6">
                                 <label for="personName" class="form-label">ФИО земляка <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control" id="personName" placeholder="Например: Радий Фаритович Хабиров" required>
+                                <input type="text" class="form-control" id="personName" placeholder="Иванов Иван Иванович" required>
                             </div>
                             <div class="col-12 col-md-6">
                                 <label for="personYears" class="form-label">Годы жизни или год рождения</label>
-                                <input type="text" class="form-control" id="personYears" placeholder="Например: 1964 — н.в. или 1920–1995">
+                                <input type="text" class="form-control" id="personYears" placeholder="1980 — н.в.">
                             </div>
 
                             <div class="col-12 col-md-6">
@@ -209,7 +516,7 @@
                                 <label for="senderPhone" class="form-label">Ваш телефон для связи</label>
                                 <div class="input-group">
                                     <span class="input-group-text" id="phoneAddon">+7</span>
-                                    <input type="tel" class="form-control" id="senderPhone" placeholder="900 123-45-67" aria-describedby="phoneAddon">
+                                    <input type="tel" class="form-control" id="senderPhone" placeholder="999 999-99-99" aria-describedby="phoneAddon">
                                 </div>
                             </div>
 
@@ -220,59 +527,63 @@
 
                             <div class="col-12">
                                 <label for="personBio" class="form-label">Краткая биография и заслуги перед городом <span class="text-danger">*</span></label>
-                                <textarea class="form-control" id="personBio" rows="4" placeholder="Опишите вклад человека в развитие Стерлитамака, основные награды и достижения..." required></textarea>
+                                <textarea class="form-control" id="personBio" rows="4" placeholder="Опишите вклад человека в развитие Стерлитамака..." required></textarea>
                             </div>
 
                             <div class="col-12">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" id="dataConsent" required>
                                     <label class="form-check-label text-muted small" for="dataConsent">
-                                        Я подтверждаю достоверность предоставленной информации и согласен на обработку персональных данных
+                                        Я подтверждаю достоверность предоставленной информации и согласен на обработку персональных данных <span class="text-danger">*</span>
                                     </label>
                                 </div>
                             </div>
 
-                            <div class="col-12 d-flex gap-2 pt-2">
-                                <button type="submit" class="btn btn-primary">
-                                    Отправить предложение
-                                </button>
-                                <button type="reset" class="btn btn-outline-secondary">
-                                    Очистить
-                                </button>
+                            <div class="col-12 d-flex justify-content-end gap-2 pt-2">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+                                <button type="submit" class="btn btn-success px-4">Отправить предложение</button>
                             </div>
                         </div>
                     </form>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
 
-    </main>
-
-    <!-- Подвал страницы -->
-    <footer class="bg-dark text-white py-4 mt-auto">
-        <div class="container">
-            <div class="row align-items-center g-3">
-                <div class="col-12 col-md-6">
-                    <p class="mb-0">
-                        &copy; 2026 Информационно-туристический портал про "Стерлитамак". Собачкин Кирилл.
-                    </p>
+    <div class="modal fade" id="proposalSuccessModal" tabindex="-1" aria-labelledby="proposalSuccessLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title" id="proposalSuccessLabel">Предложение отправлено!</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Закрыть"></button>
                 </div>
-                <div class="col-12 col-md-6 text-md-end">
-                    <a class="text-white text-decoration-none me-3" href="history.html">
-                        История
-                    </a>
-                    <a class="text-white text-decoration-none me-3" href="nature.html">
-                        Природа
-                    </a>
-                    <a class="text-white text-decoration-none" href="people.html">
-                        Известные люди
-                    </a>
+                <div class="modal-body">
+                    <p class="mb-2">Большое спасибо за активное участие в развитии портала о Стерлитамаке!</p>
+                    <p class="text-muted small mb-0">Предложенная вами кандидатура будет проверена редакторами, после чего статья появится в каталоге выдающихся земляков.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Отлично</button>
                 </div>
             </div>
         </div>
-    </footer>
+    </div>
 
-    <!-- Локальное подключение Bootstrap JS Bundle -->
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const proposalForm = document.getElementById('personProposalForm');
+        if (proposalForm) {
+            proposalForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                const proposeModalEl = document.getElementById('modalProposePerson');
+                const proposeModal = bootstrap.Modal.getInstance(proposeModalEl);
+                if (proposeModal) {
+                    proposeModal.hide();
+                }
+                const successModal = new bootstrap.Modal(document.getElementById('proposalSuccessModal'));
+                successModal.show();
+                proposalForm.reset();
+            });
+        }
+    </script>
 </body>
 </html>
