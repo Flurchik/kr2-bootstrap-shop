@@ -1,41 +1,29 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="images/Gerb-Sterlitamak-icon.svg">
     <title>Главная — Информационно-туристический портал про Стерлитамак</title>
-    <!-- Локальное подключение Bootstrap CSS -->
     <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
-    <!-- Подключение собственных стилей -->
     <link rel="stylesheet" href="css/custom.css">
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
 
-    <!-- Шапка страницы -->
-    <header class="bg-primary text-white py-4">
+    <header class="navbar navbar-expand-lg navbar-dark bg-success shadow-sm py-2 py-lg-3 sticky-top header-nav">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-12 col-md-8">
-                    <h1 class="h3 mb-1">Информационно-туристический портал про "Стерлитамак"</h1>
-                    <p class="mb-0 opacity-75">
-                        Город Стерлитамак: история, уникальная природа и выдающиеся люди
-                    </p>
-                </div>
-                <div class="col-12 col-md-4 text-md-end mt-3 mt-md-0">
-                    <span class="badge bg-light text-primary">
-                        КР №2
+            <a class="navbar-brand d-flex align-items-center gap-3 me-3 text-white" href="index.html">
+                <img src="images/Gerb-Sterlitamak-icon.svg" alt="Герб Стерлитамака" width="45" height="52" class="img-fluid flex-shrink-0">
+                <div class="d-flex flex-column">
+                    <span class="fs-4 fw-bold lh-1">Стерлитамак</span>
+                    <span class="small opacity-75 d-none d-sm-block mt-1" style="font-size: 0.75rem;">
+                        Информационно-туристический портал
                     </span>
                 </div>
-            </div>
-        </div>
-    </header>
+            </a>
 
-    <!-- Навигация -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">Стерлитамак</a>
             <button
-                class="navbar-toggler"
+                class="navbar-toggler border-white-50"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#mainNavbar"
@@ -45,8 +33,9 @@
             >
                 <span class="navbar-toggler-icon"></span>
             </button>
+
             <div class="collapse navbar-collapse" id="mainNavbar">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-1">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="index.html">
                             Главная
@@ -67,28 +56,41 @@
                             Известные люди
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacts.html">
+                            Контакты
+                        </a>
+                    </li>
                 </ul>
+
+                <div class="d-flex align-items-center gap-3 pt-3 pt-lg-0 mt-3 mt-lg-0">
+                    <div class="text-lg-end text-white">
+                        <span class="small opacity-75 d-block lh-1" style="font-size: 0.72rem;">Инфоцентр:</span>
+                        <a href="tel:+79999999999" class="text-white text-decoration-none fw-bold small">+7 (999) 999-99-99</a>
+                    </div>
+                    <button type="button" class="btn btn-light btn-sm text-success fw-semibold px-3" data-bs-toggle="modal" data-bs-target="#helpModal">
+                        Справка
+                    </button>
+                </div>
             </div>
         </div>
-    </nav>
+    </header>
 
     <main>
-        <!-- Hero-блок -->
         <section class="container my-5">
             <div class="row align-items-center g-4">
                 <div class="col-12 col-lg-6">
-                    <h2 class="display-5 fw-bold">
+                    <h1 class="display-5 fw-bold">
                         Знакомство со Стерлитамаком
-                    </h2>
+                    </h1>
                     <p class="lead text-muted">
                         Стерлитамак — второй по величине город Башкортостана, основанный в 1766 году как соляная пристань. Сегодня это крупный культурный центр, сохранивший шарм купеческой архитектуры и окружённый уникальными памятниками природы.
                     </p>
-                    <a class="btn btn-primary btn-lg" href="nature.html">
+                    <a class="btn btn-success btn-lg" href="nature.html">
                         Исследовать город
                     </a>
                 </div>
                 <div class="col-12 col-lg-6">
-                    <!-- Фотография города из папки images/ -->
                     <img 
                         src="images/sterlitamak-center.jpg" 
                         alt="Исторический центр Стерлитамака с высоты птичьего полета" 
@@ -98,94 +100,187 @@
             </div>
         </section>
 
-        <!-- Блок фактов о городе -->
         <section class="container my-5">
-            <h2 class="text-center mb-4">Факты о городе</h2>
+            <div class="text-center mb-4">
+                <span class="badge bg-success px-3 py-2 text-uppercase mb-2">Гид для путешественников</span>
+                <h2 class="fw-bold">Чем заняться в Стерлитамаке</h2>
+                <p class="text-muted mx-auto" style="max-width: 600px;">
+                    Яркие впечатления, историческое наследие и возможности для активного отдыха в любое время года
+                </p>
+            </div>
             <div class="row g-4">
                 <div class="col-12 col-md-4">
-                    <div class="p-4 border rounded h-100 bg-white">
-                        <h3 class="h5">Второй в республике</h3>
-                        <p class="mb-0 text-muted">
-                            Крупнейший индустриальный и образовательный центр Башкортостана с населением свыше 270 тысяч человек.
+                    <div class="p-4 border rounded h-100 bg-white shadow-sm d-flex flex-column">
+                        <span class="badge bg-success-subtle text-success border border-success-subtle mb-3 align-self-start">История и прогулки</span>
+                        <h3 class="h5 fw-bold">Купеческий Старый город</h3>
+                        <p class="text-muted mb-3 flex-grow-1">
+                            Пройдитесь по старинным купеческим кварталам с коваными воротами и краснокирпичными усадьбами, отдохните в тенистых скверах и прогуляйтесь по набережной реки Стерли.
                         </p>
+                        <a href="nature.html" class="btn btn-outline-success btn-sm align-self-start">Архитектура &rarr;</a>
                     </div>
                 </div>
                 <div class="col-12 col-md-4">
-                    <div class="p-4 border rounded h-100 bg-white">
-                        <h3 class="h5">Город четырёх рек</h3>
-                        <p class="mb-0 text-muted">
-                            Стерлитамак расположен в месте слияния рек: Белой, Ашкадара, Стерли и Ольховки, определивших его историю.
+                    <div class="p-4 border rounded h-100 bg-white shadow-sm d-flex flex-column">
+                        <span class="badge bg-success-subtle text-success border border-success-subtle mb-3 align-self-start">Природа и трекинг</span>
+                        <h3 class="h5 fw-bold">Восхождение на Шиханы</h3>
+                        <p class="text-muted mb-3 flex-grow-1">
+                            Поднимитесь на вершины реликтовых рифов Торатау и Куштау по безопасным экотропам с лестницами, посетите современный визит-центр и насладитесь панорамой степей.
                         </p>
+                        <a href="nature.html" class="btn btn-outline-success btn-sm align-self-start">Памятка туристу &rarr;</a>
                     </div>
                 </div>
                 <div class="col-12 col-md-4">
-                    <div class="p-4 border rounded h-100 bg-white">
-                        <h3 class="h5">Ворота к Шиханам</h3>
-                        <p class="mb-0 text-muted">
-                            В окрестностях города возвышаются знаменитые горы Торатау, Куштау и Юрактау — рифы древнего Пермского моря.
+                    <div class="p-4 border rounded h-100 bg-white shadow-sm d-flex flex-column">
+                        <span class="badge bg-success-subtle text-success border border-success-subtle mb-3 align-self-start">Традиции и вкус</span>
+                        <h3 class="h5 fw-bold">Башкирское гостеприимство</h3>
+                        <p class="text-muted mb-3 flex-grow-1">
+                            Попробуйте национальные блюда — сочные эчпочмаки, бешбармак, кыстыбый и целебный липовый мёд, а на память увезите фирменные сувениры содовой столицы.
                         </p>
+                        <a href="contacts.html" class="btn btn-outline-success btn-sm align-self-start">Инфоцентр &rarr;</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Блок популярных мест с фотографиями -->
+        <section class="bg-light py-5 border-top border-bottom my-5">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <span class="badge bg-success px-3 py-2 text-uppercase mb-2">Статистика и рекорды</span>
+                    <h2 class="display-6 fw-bold">Стерлитамак в цифрах</h2>
+                    <p class="text-muted mx-auto" style="max-width: 650px;">
+                        Ключевые показатели и исторические вехи, отражающие масштаб, уникальное природное наследие и динамику развития города
+                    </p>
+                </div>
+                <div class="row g-4 text-center">
+                    <div class="col-6 col-lg-3">
+                        <div class="card h-100 border-0 shadow-sm p-4 bg-white">
+                            <div class="display-5 fw-bold text-success mb-1">1766</div>
+                            <div class="fw-semibold text-dark mb-2">Год основания</div>
+                            <p class="small text-muted mb-0">
+                                Заложен как Ашкадарская соляная пристань купцом Саввой Тетюшевым по государственному указу.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <div class="card h-100 border-0 shadow-sm p-4 bg-white">
+                            <div class="display-5 fw-bold text-success mb-1">270+ тыс.</div>
+                            <div class="fw-semibold text-dark mb-2">Жителей</div>
+                            <p class="small text-muted mb-0">
+                                Второй по величине индустриальный, научный и культурный центр Республики Башкортостан.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <div class="card h-100 border-0 shadow-sm p-4 bg-white">
+                            <div class="display-5 fw-bold text-success mb-1">4 реки</div>
+                            <div class="fw-semibold text-dark mb-2">Водные артерии</div>
+                            <p class="small text-muted mb-0">
+                                Расположен на слиянии рек Белой, Ашкадара, Стерли и Ольховки с обустроенными набережными.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <div class="card h-100 border-0 shadow-sm p-4 bg-white">
+                            <div class="display-5 fw-bold text-success mb-1">280 млн</div>
+                            <div class="fw-semibold text-dark mb-2">Лет шиханам</div>
+                            <p class="small text-muted mb-0">
+                                Возраст древних коралловых рифов Пермского периода — гор Торатау, Куштау и Юрактау.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <div class="card h-100 border-0 shadow-sm p-4 bg-white">
+                            <div class="display-5 fw-bold text-success mb-1">1-я</div>
+                            <div class="fw-semibold text-dark mb-2">Столица республики</div>
+                            <p class="small text-muted mb-0">
+                                В 1919–1922 годах Стерлитамак являлся официальной столицей Автономной Советской Башкирии.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <div class="card h-100 border-0 shadow-sm p-4 bg-white">
+                            <div class="display-5 fw-bold text-success mb-1">108 км²</div>
+                            <div class="fw-semibold text-dark mb-2">Площадь города</div>
+                            <p class="small text-muted mb-0">
+                                Просторный зелёный город с широкими проспектами, 12 парками и благоустроенными скверами.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <div class="card h-100 border-0 shadow-sm p-4 bg-white">
+                            <div class="display-5 fw-bold text-success mb-1">120+</div>
+                            <div class="fw-semibold text-dark mb-2">Памятников зодчества</div>
+                            <p class="small text-muted mb-0">
+                                Сохранившиеся особняки купцов, исторические гимназии и здания рубежа XIX–XX веков.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <div class="card h-100 border-0 shadow-sm p-4 bg-white">
+                            <div class="display-5 fw-bold text-success mb-1">315 кг</div>
+                            <div class="fw-semibold text-dark mb-2">Метеорит города</div>
+                            <p class="small text-muted mb-0">
+                                Железный метеорит «Стерлитамак», упавший в 1990 году — второй по величине в России.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="container my-5">
             <div class="d-flex justify-content-between align-items-center mb-4">
                 <h2 class="mb-0">Популярные места</h2>
-                <a class="btn btn-outline-primary" href="nature.html">
+                <a class="btn btn-outline-success" href="nature.html">
                     Все места
                 </a>
             </div>
 
             <div class="row g-4">
-                <!-- Карточка 1: Шихан Торатау -->
                 <div class="col-12 col-md-6 col-lg-4">
-                    <div class="border rounded h-100 bg-white overflow-hidden d-flex flex-column">
+                    <div class="border rounded h-100 bg-white overflow-hidden d-flex flex-column shadow-sm">
                         <img 
-                            src="images/toratau.jpg" 
-                            alt="Шихан Торатау" 
+                            src="images/museum-bank.jpg" 
+                            alt="Историко-краеведческий музей" 
                             class="card-img-custom"
                         >
                         <div class="p-4 d-flex flex-column flex-grow-1">
-                            <span class="badge bg-success mb-2 align-self-start">Памятник природы</span>
-                            <h3 class="h5">Шихан Торатау</h3>
+                            <span class="badge bg-success mb-2 align-self-start">Музей и метеорит</span>
+                            <h3 class="h5">Краеведческий музей</h3>
                             <p class="text-muted">
-                                Величественный останец древнего рифа и визитная карточка природы вокруг города.
-                            </p>
-                            <p class="fw-bold mb-3 mt-auto">20 км от города</p>
-                            <a class="btn btn-primary" href="nature.html">
-                                Подробнее
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Карточка 2: Земская управа -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="border rounded h-100 bg-white overflow-hidden d-flex flex-column">
-                        <img 
-                            src="images/zemskaya-uprava.jpg" 
-                            alt="Здание бывшей земской управы" 
-                            class="card-img-custom"
-                        >
-                        <div class="p-4 d-flex flex-column flex-grow-1">
-                            <span class="badge bg-warning text-dark mb-2 align-self-start">Архитектура</span>
-                            <h3 class="h5">Бывшая земская управа</h3>
-                            <p class="text-muted">
-                                Архитектурная жемчужина старого города, построенная в начале XX века в стиле эклектики.
+                                Расположен в особняке Сибирского банка 1914 года. Здесь хранятся артефакты сарматов и фрагмент метеорита.
                             </p>
                             <p class="fw-bold mb-3 mt-auto">Ул. Карла Маркса</p>
-                            <a class="btn btn-primary" href="history.html">
+                            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalMuseum">
                                 Подробнее
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Карточка 3: Русский драматический театр -->
                 <div class="col-12 col-md-6 col-lg-4">
-                    <div class="border rounded h-100 bg-white overflow-hidden d-flex flex-column">
+                    <div class="border rounded h-100 bg-white overflow-hidden d-flex flex-column shadow-sm">
+                        <img 
+                            src="images/nikolsky-sobor.jpg" 
+                            alt="Никольский кафедральный собор" 
+                            class="card-img-custom"
+                        >
+                        <div class="p-4 d-flex flex-column flex-grow-1">
+                            <span class="badge bg-warning text-dark mb-2 align-self-start">Зодчество 1838 г.</span>
+                            <h3 class="h5">Никольский собор</h3>
+                            <p class="text-muted">
+                                Старейший сохранившийся православный храм Стерлитамака в стиле строгого русского классицизма.
+                            </p>
+                            <p class="fw-bold mb-3 mt-auto">Ул. Калинина</p>
+                            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalSobor">
+                                Подробнее
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="border rounded h-100 bg-white overflow-hidden d-flex flex-column shadow-sm">
                         <img 
                             src="images/dramatheater.jpg" 
                             alt="Русский драматический театр" 
@@ -195,12 +290,12 @@
                             <span class="badge bg-danger mb-2 align-self-start">Культура</span>
                             <h3 class="h5">Русский драмтеатр</h3>
                             <p class="text-muted">
-                                Один из ключевых центров культурной жизни горожан на Театральной площади.
+                                Центр театрального искусства юга республики на Театральной площади со светомузыкальным фонтаном.
                             </p>
-                            <p class="fw-bold mb-3 mt-auto">Ул. Худайбердина</p>
-                            <a class="btn btn-primary" href="nature.html">
+                            <p class="fw-bold mb-3 mt-auto">Театральная площадь</p>
+                            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalTheater">
                                 Подробнее
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -208,31 +303,182 @@
         </section>
     </main>
 
-    <!-- Подвал страницы -->
-    <footer class="bg-dark text-white py-4 mt-5">
+    <footer class="bg-dark text-white py-5 mt-auto">
         <div class="container">
-            <div class="row align-items-center g-3">
-                <div class="col-12 col-md-6">
-                    <p class="mb-0">
-                        &copy; 2026 Информационно-туристический портал про "Стерлитамак". Собачкин Кирилл.
+            <div class="row g-4">
+                <div class="col-12 col-md-4">
+                    <div class="d-flex align-items-center gap-2 mb-3">
+                        <img src="images/Gerb-Sterlitamak-icon.svg" alt="Герб Стерлитамака" width="30" height="35">
+                        <h5 class="mb-0 fw-bold">Стерлитамак</h5>
+                    </div>
+                    <p class="text-white-50 small mb-3">
+                        Информационно-туристический портал: история основания соляной пристани, уникальные шиханы, памятники архитектуры и выдающиеся земляки.
+                    </p>
+                    <p class="text-white-50 small mb-0">
+                        &copy; 2026 Информационно-туристический портал «Стерлитамак». Все права защищены.
                     </p>
                 </div>
-                <div class="col-12 col-md-6 text-md-end">
-                    <a class="text-white text-decoration-none me-3" href="history.html">
-                        История
-                    </a>
-                    <a class="text-white text-decoration-none me-3" href="nature.html">
-                        Природа
-                    </a>
-                    <a class="text-white text-decoration-none" href="people.html">
-                        Известные люди
-                    </a>
+
+                <div class="col-12 col-sm-6 col-md-4">
+                    <h5 class="fw-bold mb-3">Навигация</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2">
+                            <a class="footer-link text-decoration-none" href="history.html">История города</a>
+                        </li>
+                        <li class="mb-2">
+                            <a class="footer-link text-decoration-none" href="nature.html">Природа и архитектура</a>
+                        </li>
+                        <li class="mb-2">
+                            <a class="footer-link text-decoration-none" href="people.html">Известные люди</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4">
+                    <h5 class="fw-bold mb-3">Контакты</h5>
+                    <ul class="list-unstyled text-white-50 small mb-0">
+                        <li class="mb-2">
+                            <strong class="text-white">Адрес:</strong><br>
+                            г. Стерлитамак
+                        </li>
+                        <li class="mb-2">
+                            <strong class="text-white">Телефон:</strong><br>
+                            <a href="tel:+79999999999" class="text-white-50 text-decoration-none">+7 (999) 999-99-99</a>
+                        </li>
+                        <li class="mb-2">
+                            <strong class="text-white">Электронная почта:</strong><br>
+                            <a href="mailto:info@example.com" class="text-white-50 text-decoration-none">info@example.com</a>
+                        </li>
+                        <li class="mb-3">
+                            <strong class="text-white">Режим работы:</strong><br>
+                            Пн–Пт с 09:00 до 18:00
+                        </li>
+                        <li>
+                            <a href="contacts.html" class="btn btn-outline-light btn-sm">
+                                Страница контактов &rarr;
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Локальное подключение Bootstrap JS Bundle -->
+    <div class="modal fade" id="helpModal" tabindex="-1" aria-labelledby="helpModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title" id="helpModalLabel">Справочная информация</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-muted">Добро пожаловать на информационно-туристический портал города Стерлитамак!</p>
+                    <ul class="list-group list-group-flush mb-3">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span>Горячая линия инфоцентра:</span>
+                            <a href="tel:+79999999999" class="fw-bold text-decoration-none">+7 (999) 999-99-99</a>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span>Электронная почта:</span>
+                            <a href="mailto:info@example.com" class="text-decoration-none">info@example.com</a>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span>Экстренная служба спасения:</span>
+                            <span class="badge bg-danger fs-6">112</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span>Режим работы:</span>
+                            <span class="text-muted">Пн–Пт 09:00 — 18:00</span>
+                        </li>
+                    </ul>
+                    <p class="small text-muted mb-0">Для получения информации о маршрутах, экскурсиях и справочных службах посетите раздел контактов.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="contacts.html" class="btn btn-success">Раздел контактов</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalMuseum" tabindex="-1" aria-labelledby="modalMuseumLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalMuseumLabel">Историко-краеведческий музей</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/museum-bank.jpg" alt="Историко-краеведческий музей" class="img-fluid rounded mb-3 w-100" style="max-height: 240px; object-fit: cover;">
+                    <p class="text-muted">
+                        Стерлитамакский историко-краеведческий музей расположен в памятнике архитектуры начала XX века — бывшем здании Сибирского купеческого банка (1914 г.). В фондах музея насчитывается свыше 35 тысяч ценных экспонатов.
+                    </p>
+                    <ul class="list-unstyled small text-muted">
+                        <li><strong>Главная реликвия:</strong> Фрагмент настоящего железного метеорита «Стерлитамак», упавшего в 1990 году.</li>
+                        <li><strong>Экспозиции:</strong> Палеонтология древнего Пермского моря, сарматская культура, соляная пристань и быт купечества.</li>
+                        <li><strong>Адрес:</strong> г. Стерлитамак, ул. Карла Маркса, 100.</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <a href="nature.html" class="btn btn-success">К разделу архитектуры &rarr;</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalSobor" tabindex="-1" aria-labelledby="modalSoborLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalSoborLabel">Никольский кафедральный собор</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/nikolsky-sobor.jpg" alt="Никольский кафедральный собор" class="img-fluid rounded mb-3 w-100" style="max-height: 240px; object-fit: cover;">
+                    <p class="text-muted">
+                        Никольский собор — старейшее сохранившееся каменное здание религиозного зодчества Стерлитамака. Возведён в 1838 году в строгом стиле русского классицизма на средства прихожан и купечества.
+                    </p>
+                    <ul class="list-unstyled small text-muted">
+                        <li><strong>Год постройки:</strong> 1838 год (памятник архитектуры регионального значения).</li>
+                        <li><strong>Архитектурный стиль:</strong> Классицизм с величественной колокольней и купольной ротондой.</li>
+                        <li><strong>Адрес:</strong> г. Стерлитамак, ул. Калинина, 52.</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <a href="nature.html" class="btn btn-success">К разделу архитектуры &rarr;</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalTheater" tabindex="-1" aria-labelledby="modalTheaterLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTheaterLabel">Русский драматический театр</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/dramatheater.jpg" alt="Русский драматический театр" class="img-fluid rounded mb-3 w-100" style="max-height: 240px; object-fit: cover;">
+                    <p class="text-muted">
+                        Главный драматический театр юга Башкортостана, основанный в 1946 году. Расположен в центре города на Театральной площади и является любимым местом культурного отдыха жителей и гостей Стерлитамака.
+                    </p>
+                    <ul class="list-unstyled small text-muted">
+                        <li><strong>Репертуар:</strong> Русская и мировая классика, современные драмы, детские и музыкальные спектакли.</li>
+                        <li><strong>Локация:</strong> Театральная площадь со светомузыкальным фонтаном и сквером.</li>
+                        <li><strong>Адрес:</strong> г. Стерлитамак, ул. Худайбердина, 18.</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <a href="nature.html" class="btn btn-success">Архитектура города &rarr;</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

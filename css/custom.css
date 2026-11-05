@@ -1,3 +1,13 @@
+:root, [data-bs-theme=light] {
+  --bs-primary: #198754;
+  --bs-primary-rgb: 25, 135, 84;
+  --bs-primary-text-emphasis: #0a3622;
+  --bs-primary-bg-subtle: #d1e7dd;
+  --bs-primary-border-subtle: #a3cfbb;
+  --bs-link-color: #198754;
+  --bs-link-hover-color: #146c43;
+}
+
 body {
   min-height: 100vh;
 }
@@ -6,9 +16,155 @@ body {
   min-height: 240px;
 }
 
-/* Одинаковая аккуратная высота картинок в карточках */
 .card-img-custom {
   height: 200px;
   width: 100%;
   object-fit: cover;
+}
+
+/* Единая зелёная шапка сайта */
+.header-nav {
+  z-index: 1030;
+  background-color: #198754 !important;
+}
+
+.header-nav .nav-link {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+  padding: 0.5rem 0.85rem;
+  border-radius: 0.375rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.header-nav .nav-link:hover {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.18);
+}
+
+.header-nav .nav-link.active {
+  color: #ffffff !important;
+  font-weight: 700;
+  background-color: rgba(255, 255, 255, 0.28);
+}
+
+/* Переопределение синих элементов на зелёные */
+.bg-primary {
+  background-color: #198754 !important;
+}
+
+.btn-primary {
+  --bs-btn-bg: #198754;
+  --bs-btn-border-color: #198754;
+  --bs-btn-hover-bg: #157347;
+  --bs-btn-hover-border-color: #146c43;
+  --bs-btn-active-bg: #146c43;
+  --bs-btn-active-border-color: #13653f;
+  --bs-btn-disabled-bg: #198754;
+  --bs-btn-disabled-border-color: #198754;
+  background-color: #198754 !important;
+  border-color: #198754 !important;
+  color: #ffffff !important;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+  background-color: #157347 !important;
+  border-color: #146c43 !important;
+}
+
+.btn-outline-primary {
+  --bs-btn-color: #198754;
+  --bs-btn-border-color: #198754;
+  --bs-btn-hover-bg: #198754;
+  --bs-btn-hover-border-color: #198754;
+  --bs-btn-active-bg: #198754;
+  --bs-btn-active-border-color: #198754;
+  color: #198754 !important;
+  border-color: #198754 !important;
+}
+
+.btn-outline-primary:hover, .btn-outline-primary:focus {
+  background-color: #198754 !important;
+  border-color: #198754 !important;
+  color: #ffffff !important;
+}
+
+.text-primary {
+  color: #198754 !important;
+}
+
+.border-primary {
+  border-color: #198754 !important;
+}
+
+.alert-primary {
+  --bs-alert-color: #0a3622;
+  --bs-alert-bg: #d1e7dd;
+  --bs-alert-border-color: #a3cfbb;
+  color: #0a3622;
+  background-color: #d1e7dd;
+  border-color: #a3cfbb;
+}
+
+.bg-blue {
+  background-color: #0d6efd !important;
+}
+
+.btn-outline-blue {
+  color: #0d6efd !important;
+  border-color: #0d6efd !important;
+}
+
+.btn-outline-blue:hover, .btn-outline-blue:focus, .btn-outline-blue:active {
+  color: #ffffff !important;
+  background-color: #0d6efd !important;
+  border-color: #0d6efd !important;
+}
+
+.btn-blue {
+  color: #ffffff !important;
+  background-color: #0d6efd !important;
+  border-color: #0d6efd !important;
+}
+
+.btn-blue:hover, .btn-blue:focus, .btn-blue:active {
+  color: #ffffff !important;
+  background-color: #0b5ed7 !important;
+  border-color: #0a58ca !important;
+}
+
+.bg-sky {
+  background-color: #0284c7 !important;
+}
+
+/* Стилизация ссылок в подвале */
+.footer-link {
+  color: rgba(255, 255, 255, 0.65);
+  transition: color 0.2s ease-in-out, padding-left 0.2s ease-in-out;
+  display: inline-block;
+}
+
+.footer-link:hover {
+  color: #ffffff;
+  padding-left: 4px;
+}
+
+/* Контактные карточки и элементы */
+.contact-icon-badge {
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 1.25rem;
+}
+
+.map-placeholder {
+  min-height: 320px;
+  background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
