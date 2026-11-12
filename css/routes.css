@@ -1,0 +1,124 @@
+#routesMap {
+    height: 620px;
+    width: 100%;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    background-color: #e9ecef;
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, 0.075);
+}
+
+@media (max-width: 991.98px) {
+    #routesMap {
+        height: 420px;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.map-sticky-wrapper {
+    position: sticky;
+    top: 90px;
+}
+
+.stop-card {
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    border-radius: 0.75rem !important;
+    overflow: hidden !important;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.stop-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1) !important;
+    border-color: #198754 !important;
+}
+
+.stop-card.border-success {
+    border-color: #198754 !important;
+    border-width: 2px !important;
+    background-color: #fbfdfc;
+}
+
+.stop-badge-circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #ffffff;
+    flex-shrink: 0;
+}
+
+.stop-thumb-container {
+    width: 100%;
+    height: 90px;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background-color: #f1f3f5;
+}
+
+.stop-thumb-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.stop-card:hover .stop-thumb-img {
+    transform: scale(1.04);
+}
+
+.modal-image-wrapper {
+    width: 100%;
+    height: 240px;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background-color: #f1f3f5;
+}
+
+.modal-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.text-truncate-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.route-summary-card {
+    border-radius: 0.75rem;
+    background: linear-gradient(180deg, #ffffff 0%, #fbfcfd 100%);
+}
+
+[data-bs-theme="dark"] .route-summary-card {
+    background: linear-gradient(180deg, var(--bs-secondary-bg) 0%, var(--bs-tertiary-bg) 100%);
+}
+
+[data-bs-theme="dark"] #routesMap {
+    background-color: #2b3035;
+}
+
+[data-bs-theme="dark"] .stop-card {
+    background-color: var(--bs-secondary-bg);
+    border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+[data-bs-theme="dark"] .stop-card.border-success {
+    background-color: rgba(25, 135, 84, 0.16);
+    border-color: #20a86b !important;
+}
+
+[data-bs-theme="dark"] .stop-thumb-container,
+[data-bs-theme="dark"] .modal-image-wrapper {
+    background-color: #212529;
+}

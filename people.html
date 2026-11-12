@@ -7,6 +7,7 @@
     <title>Известные люди — Информационно-туристический портал про Стерлитамак</title>
     <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/custom.css">
+    <script src="js/theme.js"></script>
 </head>
 <body class="d-flex flex-column min-vh-100">
 
@@ -57,19 +58,27 @@
                         </a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="routes.html">
+                            Маршруты
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="contacts.html">
                             Контакты
                         </a>
                     </li>
                 </ul>
 
-                <div class="d-flex align-items-center gap-3 pt-3 pt-lg-0 mt-3 mt-lg-0">
-                    <div class="text-lg-end text-white">
-                        <span class="small opacity-75 d-block lh-1" style="font-size: 0.72rem;">Инфоцентр:</span>
-                        <a href="tel:+79999999999" class="text-white text-decoration-none fw-bold small">+7 (999) 999-99-99</a>
-                    </div>
-                    <button type="button" class="btn btn-light btn-sm text-success fw-semibold px-3" data-bs-toggle="modal" data-bs-target="#helpModal">
-                        Справка
+                <div class="d-flex align-items-center gap-2 pt-3 pt-lg-0 mt-3 mt-lg-0" id="headerActions">
+                    <button type="button" class="btn btn-outline-light btn-sm btn-header-square" data-bs-toggle="modal" data-bs-target="#siteSearchModal" aria-label="Поиск по сайту" title="Поиск по сайту">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                        </svg>
+                    </button>
+                    <button type="button" class="btn btn-outline-light btn-sm btn-header-square" id="themeToggleBtn" aria-label="Переключить тему" title="Тёмная тема">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                            <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/>
+                        </svg>
                     </button>
                 </div>
             </div>
@@ -96,9 +105,20 @@
             </p>
         </div>
 
-        <h2 class="h3 mb-4">Выдающиеся земляки</h2>
-        <div class="d-flex flex-column gap-3 mb-5">
-            <div class="card shadow-sm border-0">
+        <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 p-3 bg-white border rounded-3 shadow-sm mb-4">
+            <h2 class="h4 fw-bold mb-0">Выдающиеся земляки</h2>
+            <div class="d-flex flex-wrap align-items-center gap-2">
+                <div class="d-flex flex-wrap gap-1 p-1 people-filter-frame" id="peopleFilterBar" role="group" aria-label="Фильтр по категориям">
+                    <button type="button" class="btn btn-sm btn-success text-white rounded-pill px-3" data-filter="all" aria-pressed="true">Все (6)</button>
+                    <button type="button" class="btn btn-sm btn-filter-idle rounded-pill px-3" data-filter="culture" aria-pressed="false">Культура (2)</button>
+                    <button type="button" class="btn btn-sm btn-filter-idle rounded-pill px-3" data-filter="sport" aria-pressed="false">Спорт (3)</button>
+                    <button type="button" class="btn btn-sm btn-filter-idle rounded-pill px-3" data-filter="media" aria-pressed="false">Медиа (1)</button>
+                </div>
+                <span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill px-3 py-2" id="peopleFilterCount">Показано: 6 из 6</span>
+            </div>
+        </div>
+        <div class="d-flex flex-column gap-3 mb-5" id="peopleCardsList">
+            <div class="card shadow-sm border-0" id="anciferova" data-category="culture">
                 <div class="row g-0 align-items-center">
                     <div class="col-12 col-md-4 col-lg-3 text-center p-3">
                         <img src="images/anciferova.jpg" class="rounded-circle shadow-sm" alt="Татьяна Анциферова" style="width: 140px; height: 140px; object-fit: cover;">
@@ -118,7 +138,7 @@
                 </div>
             </div>
 
-            <div class="card shadow-sm border-0">
+            <div class="card shadow-sm border-0" id="baranova" data-category="culture">
                 <div class="row g-0 align-items-center">
                     <div class="col-12 col-md-4 col-lg-3 text-center p-3">
                         <img src="images/baranova.jpg" class="rounded-circle shadow-sm" alt="Лариса Баранова" style="width: 140px; height: 140px; object-fit: cover;">
@@ -138,7 +158,7 @@
                 </div>
             </div>
 
-            <div class="card shadow-sm border-0">
+            <div class="card shadow-sm border-0" id="soldatova" data-category="sport">
                 <div class="row g-0 align-items-center">
                     <div class="col-12 col-md-4 col-lg-3 text-center p-3">
                         <img src="images/soldatova.jpg" class="rounded-circle shadow-sm" alt="Александра Солдатова" style="width: 140px; height: 140px; object-fit: cover;">
@@ -158,7 +178,7 @@
                 </div>
             </div>
 
-            <div class="card shadow-sm border-0">
+            <div class="card shadow-sm border-0" id="zaripov" data-category="sport">
                 <div class="row g-0 align-items-center">
                     <div class="col-12 col-md-4 col-lg-3 text-center p-3">
                         <img src="images/zaripov.jpg" class="rounded-circle shadow-sm" alt="Ирек Зарипов" style="width: 140px; height: 140px; object-fit: cover;">
@@ -178,7 +198,7 @@
                 </div>
             </div>
 
-            <div class="card shadow-sm border-0">
+            <div class="card shadow-sm border-0" id="lebedeva" data-category="sport">
                 <div class="row g-0 align-items-center">
                     <div class="col-12 col-md-4 col-lg-3 text-center p-3">
                         <img src="images/lebedeva.jpg" class="rounded-circle shadow-sm" alt="Татьяна Лебедева" style="width: 140px; height: 140px; object-fit: cover;">
@@ -198,7 +218,7 @@
                 </div>
             </div>
 
-            <div class="card shadow-sm border-0">
+            <div class="card shadow-sm border-0" id="badcomedian" data-category="media">
                 <div class="row g-0 align-items-center">
                     <div class="col-12 col-md-4 col-lg-3 text-center p-3">
                         <img src="images/badcomedian.jpg" class="rounded-circle shadow-sm" alt="Евгений Баженов (BadComedian)" style="width: 140px; height: 140px; object-fit: cover;">
@@ -263,6 +283,9 @@
                         <li class="mb-2">
                             <a class="footer-link text-decoration-none" href="people.html">Известные люди</a>
                         </li>
+                        <li class="mb-2">
+                            <a class="footer-link text-decoration-none" href="routes.html">Маршруты по городу</a>
+                        </li>
                     </ul>
                 </div>
 
@@ -295,38 +318,6 @@
             </div>
         </div>
     </footer>
-
-    <div class="modal fade" id="helpModal" tabindex="-1" aria-labelledby="helpModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header bg-success text-white">
-                    <h5 class="modal-title" id="helpModalLabel">Справочная информация</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Закрыть"></button>
-                </div>
-                <div class="modal-body">
-                    <p class="text-muted">Информационно-туристический портал города Стерлитамак.</p>
-                    <ul class="list-group list-group-flush mb-3">
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <span>Горячая линия инфоцентра:</span>
-                            <a href="tel:+79999999999" class="fw-bold text-decoration-none">+7 (999) 999-99-99</a>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <span>Электронная почта:</span>
-                            <a href="mailto:info@example.com" class="text-decoration-none">info@example.com</a>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <span>Служба спасения:</span>
-                            <span class="badge bg-danger fs-6">112</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="modal-footer">
-                    <a href="contacts.html" class="btn btn-success">Раздел контактов</a>
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <div class="modal fade" id="modalBaranova" tabindex="-1" aria-labelledby="modalBaranovaLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -585,5 +576,8 @@
             });
         }
     </script>
+    <script src="js/people-filter.js"></script>
+    <script src="js/scroll-top.js"></script>
+    <script src="js/search.js"></script>
 </body>
 </html>

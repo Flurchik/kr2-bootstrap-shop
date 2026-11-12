@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="images/Gerb-Sterlitamak-icon.svg">
+    <title>Маршруты по городу — Информационно-туристический портал про Стерлитамак</title>
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/routes.css">
+    <script src="js/theme.js"></script>
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+    <header class="navbar navbar-expand-lg navbar-dark bg-success shadow-sm py-2 py-lg-3 sticky-top header-nav">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-3 me-3 text-white" href="index.html">
+                <img src="images/Gerb-Sterlitamak-icon.svg" alt="Герб Стерлитамака" width="45" height="52" class="img-fluid flex-shrink-0">
+                <div class="d-flex flex-column">
+                    <span class="fs-4 fw-bold lh-1">Стерлитамак</span>
+                    <span class="small opacity-75 d-none d-sm-block mt-1" style="font-size: 0.75rem;">
+                        Информационно-туристический портал
+                    </span>
+                </div>
+            </a>
+
+            <button
+                class="navbar-toggler border-white-50"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar"
+                aria-expanded="false"
+                aria-label="Переключить навигацию"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-1">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            Главная
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="history.html">
+                            История города
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nature.html">
+                            Природа и архитектура
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="people.html">
+                            Известные люди
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="routes.html">
+                            Маршруты
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacts.html">
+                            Контакты
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="d-flex align-items-center gap-2 pt-3 pt-lg-0 mt-3 mt-lg-0" id="headerActions">
+                    <button type="button" class="btn btn-outline-light btn-sm btn-header-square" data-bs-toggle="modal" data-bs-target="#siteSearchModal" aria-label="Поиск по сайту" title="Поиск по сайту">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                        </svg>
+                    </button>
+                    <button type="button" class="btn btn-outline-light btn-sm btn-header-square" id="themeToggleBtn" aria-label="Переключить тему" title="Тёмная тема">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                            <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container my-5 flex-grow-1">
+        <nav aria-label="breadcrumb" class="mb-4">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Маршруты по городу</li>
+            </ol>
+        </nav>
+
+        <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+            <div>
+                <h1 class="display-5 fw-bold mb-1">Туристические маршруты</h1>
+                <p class="lead text-muted mb-0">Интерактивный путеводитель по Стерлитамаку: готовые сценарии прогулок, старинные купеческие улицы, древние шиханы и набережная на живой карте.</p>
+            </div>
+            <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#infoModal">
+                Памятка туристу
+            </button>
+        </div>
+
+        <div class="alert alert-success shadow-sm mb-4" role="alert">
+            <h4 class="alert-heading h5">Интерактивная карта экскурсий</h4>
+            <p class="mb-0">
+                Выберите подходящий маршрут ниже. Сервис автоматически прокладывает путь по реальным городским улицам и тротуарам, рассчитывает расстояние и время в пути. Кликните по любой остановке, чтобы сфокусироваться на ней на карте.
+            </p>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2 mb-4">
+            <button type="button" class="btn btn-sm btn-success px-3 text-white" data-route-btn="merchant">
+                🏛️ Купеческий центр (3.2 км)
+            </button>
+            <button type="button" class="btn btn-sm btn-outline-secondary px-3" data-route-btn="shikhany">
+                ⛰️ Шиханы и рифы (65 км)
+            </button>
+            <button type="button" class="btn btn-sm btn-outline-secondary px-3" data-route-btn="culture">
+                🎭 Культура и набережная (1.4 км)
+            </button>
+            <button type="button" class="btn btn-sm btn-outline-secondary px-3" data-route-btn="all">
+                🗺️ Все 3 маршрута сразу
+            </button>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-12 col-lg-5">
+                <div class="card border-0 shadow-sm p-3 p-md-4 mb-4 route-summary-card">
+                    <div class="d-flex align-items-center justify-content-between mb-2">
+                        <span class="badge bg-success text-white" id="routeMetaBadge">Пешеходный</span>
+                        <span class="small text-muted fw-semibold" id="routeMetaStops">3 локации</span>
+                    </div>
+                    <h3 class="fw-bold fs-4 mb-2" id="routeMetaTitle">Купеческий Стерлитамак</h3>
+                    <p class="text-muted small mb-3" id="routeMetaDesc">
+                        Маршрут по историческому центру: старинная улица Карла Маркса (бывшая Большая Заводская), купеческие особняки XIX века и старейший каменный собор.
+                    </p>
+
+                    <div class="row g-2 text-center pt-2 border-top">
+                        <div class="col-6">
+                            <div class="p-2 rounded bg-light">
+                                <div class="text-muted small" style="font-size: 0.72rem;">Длина</div>
+                                <div class="fw-bold text-success" id="routeMetaDistance">3.2 км</div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="p-2 rounded bg-light">
+                                <div class="text-muted small" style="font-size: 0.72rem;">Время</div>
+                                <div class="fw-bold text-dark" id="routeMetaDuration">1.5–2 часа</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h5 class="fw-bold mb-0">Остановки маршрута</h5>
+                    <span class="small text-muted">Кликните для перехода на карте</span>
+                </div>
+
+                <div id="stopsList" class="mb-4"></div>
+
+                <div class="card border-0 shadow-sm p-3 text-center bg-light" style="border-radius: 0.75rem;">
+                    <div class="small text-muted mb-2">Готовы отправиться в путь?</div>
+                    <a id="btnYandexMaps" href="https://yandex.ru/maps/?rtext=53.617121,55.964647~53.617367,55.964153~53.607303,55.929828&rtt=pd" target="_blank" rel="noopener" class="btn btn-success btn-sm px-4 fw-semibold shadow-sm">
+                        Открыть маршрут в Яндекс.Картах &rarr;
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-7">
+                <div class="map-sticky-wrapper">
+                    <div class="card border-0 shadow-sm p-2 mb-2 bg-white" style="border-radius: 0.75rem;">
+                        <div class="d-flex justify-content-between align-items-center px-2 py-1">
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="spinner-grow spinner-grow-sm text-danger" role="status"></span>
+                                <span class="small fw-semibold text-muted">Яндекс.Карты: маршрут</span>
+                            </div>
+                            <button type="button" class="btn btn-sm btn-light border py-1 px-2 small" onclick="fitCurrentRoute()" title="Показать весь маршрут">
+                                Сбросить зум ⤢
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="routesMap"></div>
+
+                    <div class="d-flex align-items-center justify-content-between px-2 pt-2 small text-muted">
+                        <span class="d-none d-md-inline">Стерлитамак, Башкортостан</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="mt-5" id="weatherWidgetSection" aria-label="Погода в Стерлитамаке"></section>
+    </main>
+
+    <div class="modal fade" id="stopDetailModal" tabindex="-1" aria-labelledby="modalStopTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow">
+                <div class="modal-header border-0 pb-0">
+                    <h5 class="modal-title fw-bold" id="modalStopTitle">Название локации</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-image-wrapper mb-3">
+                        <img id="modalStopImage" src="images/museum-bank.jpg" alt="Локация">
+                    </div>
+                    <div class="d-flex flex-wrap gap-2 mb-3">
+                        <span class="badge bg-light text-dark border" id="modalStopAddress">Адрес</span>
+                        <span class="badge bg-success-subtle text-success border border-success-subtle" id="modalStopTime">Время</span>
+                    </div>
+                    <p class="text-muted mb-2" id="modalStopDesc"></p>
+                    <div class="p-3 bg-light rounded text-secondary small" id="modalStopDetails"></div>
+                </div>
+                <div class="modal-footer border-0 pt-0">
+                    <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title" id="infoModalLabel">Памятка туристу по маршрутам</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-muted">Рекомендации для комфортных прогулок по Стерлитамаку и шиханам:</p>
+                    <ul class="list-group list-group-flush mb-3">
+                        <li class="list-group-item">
+                            <strong>Пешие маршруты:</strong> Удобная обувь для прогулок по исторической брусчатке и набережной.
+                        </li>
+                        <li class="list-group-item">
+                            <strong>Шиханы:</strong> Возьмите питьевую воду и ветрозащитную одежду. На Торатау поднимайтесь строго по обустроенной эко-тропе.
+                        </li>
+                        <li class="list-group-item">
+                            <strong>Музеи:</strong> Краеведческий музей работает со вторника по субботу с 10:00 до 18:00 (выходные — воскресенье, понедельник).
+                        </li>
+                        <li class="list-group-item">
+                            <strong>Визит-центр Торатау:</strong> Круглогодично предлагает экскурсии, сувениры, горячий чай и башкирскую выпечку.
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Понятно</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <footer class="bg-dark text-white py-5 mt-auto">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-12 col-md-4">
+                    <div class="d-flex align-items-center gap-2 mb-3">
+                        <img src="images/Gerb-Sterlitamak-icon.svg" alt="Герб Стерлитамака" width="30" height="35">
+                        <h5 class="mb-0 fw-bold">Стерлитамак</h5>
+                    </div>
+                    <p class="text-white-50 small mb-3">
+                        Информационно-туристический портал: история основания соляной пристани, уникальные шиханы, памятники архитектуры и выдающиеся земляки.
+                    </p>
+                    <p class="text-white-50 small mb-0">
+                        &copy; 2026 Информационно-туристический портал «Стерлитамак». Все права защищены.
+                    </p>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4">
+                    <h5 class="fw-bold mb-3">Навигация</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2">
+                            <a class="footer-link text-decoration-none" href="history.html">История города</a>
+                        </li>
+                        <li class="mb-2">
+                            <a class="footer-link text-decoration-none" href="nature.html">Природа и архитектура</a>
+                        </li>
+                        <li class="mb-2">
+                            <a class="footer-link text-decoration-none" href="people.html">Известные люди</a>
+                        </li>
+                        <li class="mb-2">
+                            <a class="footer-link text-decoration-none" href="routes.html">Маршруты по городу</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4">
+                    <h5 class="fw-bold mb-3">Контакты</h5>
+                    <ul class="list-unstyled text-white-50 small mb-0">
+                        <li class="mb-2">
+                            <strong class="text-white">Адрес:</strong><br>
+                            г. Стерлитамак
+                        </li>
+                        <li class="mb-2">
+                            <strong class="text-white">Телефон:</strong><br>
+                            <a href="tel:+79999999999" class="text-white-50 text-decoration-none">+7 (999) 999-99-99</a>
+                        </li>
+                        <li class="mb-2">
+                            <strong class="text-white">Электронная почта:</strong><br>
+                            <a href="mailto:info@example.com" class="text-white-50 text-decoration-none">info@example.com</a>
+                        </li>
+                        <li class="mb-3">
+                            <strong class="text-white">Режим работы:</strong><br>
+                            Пн–Пт с 09:00 до 18:00
+                        </li>
+                        <li>
+                            <a href="contacts.html" class="btn btn-outline-light btn-sm">
+                                Страница контактов &rarr;
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="js/routes.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/scroll-top.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>
